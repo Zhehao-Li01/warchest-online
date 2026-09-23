@@ -1,0 +1,611 @@
+{
+  "games": 100,
+  "max_actions": 2000,
+  "ai_seed": 10000,
+  "summary": {
+    "truncated": 94,
+    "finished": 6
+  },
+  "results": [
+    {
+      "seed": 0,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 1,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 2,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 3,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 4,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 5,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 6,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 7,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 8,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 9,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 10,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 11,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 12,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 13,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 14,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 15,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 16,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 17,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 18,
+      "actions": 322,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 19,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 20,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 21,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 22,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 23,
+      "actions": 396,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 24,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 25,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 26,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 27,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 28,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 29,
+      "actions": 206,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 30,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 31,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 32,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 33,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 34,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 35,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 36,
+      "actions": 269,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 37,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 38,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 39,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 40,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 41,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 42,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 43,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 44,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 45,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 46,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 47,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 48,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 49,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 50,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 51,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 52,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 53,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 54,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 55,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 56,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 57,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 58,
+      "actions": 219,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 59,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 60,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 61,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 62,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 63,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 64,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 65,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 66,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 67,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 68,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 69,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 70,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 71,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 72,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 73,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 74,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 75,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 76,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 77,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 78,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 79,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 80,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 81,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 82,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 83,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 84,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 85,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 86,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 87,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 88,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 89,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 90,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 91,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 92,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 93,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 94,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 95,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 96,
+      "actions": 128,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 97,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 98,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 99,
+      "actions": 2000,
+      "status": "truncated",
+      "winner": null
+    }
+  ]
+}

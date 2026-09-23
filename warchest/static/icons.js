@@ -1,0 +1,48 @@
+const shapes = {
+ royal: '<path d="m3 7 5 4 4-7 4 7 5-4-2 11H5Z"/><path d="M6 21h12M8 15h8"/>',
+ swordsman: '<path d="m15 3 6-1-1 6L7 21l-4-4Z"/><path d="m3 12 9 9M6 18l-3 3M10 14 18 6"/>',
+ pikeman: '<path d="m14 2 3 5-4 4-3-4Z M13 10 8 23M4 18l9 3"/>',
+ crossbowman: '<path d="M3 5q9-5 18 0L12 21ZM12 3v18M7 8l10 10M17 8 7 18"/>',
+ light_cavalry: '<path d="m8 21 1-6 6-3 4 1 2-4-7-6-3-1 1 4-6 5-2 10ZM13 7h1M5 22h13"/>',
+ archer: '<path d="M6 3q16 9 0 18L6 3ZM2 12h19m-4-4 4 4-4 4"/>',
+ cavalry: '<path d="m5 21 2-6 7-4 5 2 2-4-7-6-4-1 1 4-6 5-2 10ZM13 7h1M4 22h15M8 16l8 1"/>',
+ lancer: '<path d="m3 21 2-7 7-5 5 2 1-4-7-5-2 4-6 4M18 3l3-2 1 4-2 2ZM20 7l-5 16"/>',
+ scout: '<path d="M3 16q7 3 9-4L9 9l4-4 4 1 2 3 3 1-4 2q0 6-8 8H4ZM13 8h1M7 21l2-2 3 3"/>',
+ berserker: '<path d="m5 3 15 19M19 3 4 22M3 2q-4 7 4 9l3-4ZM21 2q4 7-4 9l-3-4Z"/>',
+ ensign: '<path d="M5 2v21M6 3q5-3 9 0t6 0v9q-4 3-8 0t-7 0M3 23h5"/>',
+ footman: '<path d="M12 4a3 3 0 1 0 0 .1M10 8v9m-3 6 3-6 4 6M6 10l4 1 5-2M3 3v19M2 5l1-4 2 4M17 10h5v7l-2.5 3-2.5-3Z"/>',
+ knight: '<path d="M7 3 4 7v5h10V6l-3-3ZM4 8h9M10 5v4M3 22v-6l4-2M16 11l6 2v6l-6 4-5-4v-6ZM16 15v5M13 17h6"/>',
+ marshall: '<path d="M9 2h6l3 6-3 6H9L6 8ZM9 7h6M12 3v10M7 15l-4 7h18l-4-7-5 4ZM10 22v-4"/>',
+ mercenary: '<path d="M10 2h4v4h-4ZM8 7h8l2 6-6 6-6-6ZM12 8v8M3 20h18M6 23h12"/>',
+ royal_guard: '<path d="M5 22V7H3V2h4v3h3V2h4v3h3V2h4v5h-2v15ZM9 22v-6a3 3 0 0 1 6 0v6M8 10h1m6 0h1"/>',
+ warrior_priest: '<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6ZM12 6v12M6 12h12"/>',
+ crest: '<path d="m4 3 8-2 8 2v8q0 6-8 12-8-6-8-12ZM7 8l3 3 2-6 2 6 3-3-1 8H8Z"/>',
+ bag: '<path d="m8 2 2 5h4l2-5ZM9 8q-7 7-6 12c3 3 15 3 18 0 1-5-6-12-6-12ZM8 7h8"/>',
+};
+Object.assign(shapes, {
+ bannerman:'<path d="M5 2v21M6 3h14l-4 4 4 4H6M3 22h5M12 4v5"/>',
+ bishop:'<path d="M5 16Q2 8 12 2q10 6 7 14ZM4 20h16M12 6v7M9 9h6"/>',
+ earl:'<path d="m3 8 5 4 4-7 4 7 5-4-3 12H6ZM8 16h8M12 1v4"/>',
+ herald:'<path d="M3 10h9l8-6v16l-8-6H3ZM8 14v7h5v-6M20 9l3-2M21 12h3"/>',
+ sapper:'<path d="m6 2 4 4-2 3-4-4ZM8 8l9 10M13 16l5-4 4 5-6 6ZM3 20h6M4 17v6"/>',
+ siege_tower:'<path d="M4 3h4v3h3V3h3v3h3V3h3v7H4ZM6 10v10h12V10M9 12h6v4H9Z"/><circle cx="7" cy="22" r="1.5"/><circle cx="18" cy="22" r="1.5"/>',
+ trebuchet:'<path d="M3 21h18M6 21l6-14 5 14M3 5l17 8M3 2v6h4V2ZM19 12v7M17 19h5"/>',
+ war_wagon:'<path d="M3 7h18v11H3ZM5 2v5M9 2v5M13 2v5M17 2v5M6 10h12M6 14h12"/><circle cx="6" cy="21" r="2"/><circle cx="18" cy="21" r="2"/>',
+ assassin:'<path d="m12 1 3 5-2 8h-2L9 6ZM7 15h10M12 15v7M9 22h6"/><circle cx="5" cy="7" r="2"/>',
+ saboteur:'<path d="M9 2h6v5l4 5v8q-7 4-14 0v-8l4-5ZM9 5h6M8 13l8 5M16 13l-8 5"/>',
+ infiltrator:'<path d="M4 12V9a8 8 0 0 1 16 0v3M3 12h18v10H3Z"/><circle cx="12" cy="16" r="2"/><path d="M12 18v3"/>',
+ skirmisher:'<path d="m4 3 8-2 8 2v9l-8 10-8-10ZM8 8l8 8M16 8l-8 8M2 10H0M24 10h-2"/>',
+ rearguard:'<path d="m4 4 8-3 8 3v9l-8 9-8-9ZM7 10h10m-6-4-4 4 4 4"/>',
+ raider:'<path d="M3 7 7 2l5 4 5-4 4 5-3 8H6ZM8 18l4 4 4-4M8 10h2M14 10h2"/>',
+ pitch_thrower:'<path d="M7 21Q1 17 6 11q-1 5 4 3Q7 7 14 2q-2 5 4 9 7 6-1 10ZM10 21q-3-5 3-9-1 5 3 7"/>',
+ war_drummer:'<ellipse cx="12" cy="10" rx="8" ry="3"/><path d="M4 10v10q8 5 16 0V10M5 12l4 8 4-7 5 8M3 1l13 6M21 1 8 7"/>',
+ heavy_cavalry:shapes.cavalry+'<path d="M18 14h5v6l-3 3-3-3Z"/>',
+ vanguard:shapes.footman+'<path d="m16 1-2 5h4l-2 4"/>',
+ warlord:shapes.marshall+'<path d="m18 1-2 4h5l-2 5"/>',
+ decoy_infiltrator:'<path d="M3 6q9-6 18 0v9q-9 9-18 0ZM6 10h4M14 10h4M8 17q4-3 8 0"/>',
+ decoy_skirmisher:'<path d="m4 3 8-2 8 2v9l-8 10-8-10ZM7 9h3M14 9h3M8 16l8-3"/>',
+});
+export const icon = (name, cls = '') => `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-${name in shapes ? name : 'crest'}"/></svg>`;
+export function installIcons() {
+ document.querySelector('#icon-defs').innerHTML = Object.entries(shapes).map(([n,p])=>`<symbol id="i-${n}" viewBox="0 0 24 24">${p}</symbol>`).join('');
+}

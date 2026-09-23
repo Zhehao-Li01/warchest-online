@@ -1,0 +1,2119 @@
+{
+  "rules_version": "base-2",
+  "games": 100,
+  "max_actions": 1000,
+  "total_actions": 89854,
+  "summary": {
+    "truncated": 80,
+    "finished": 20
+  },
+  "continuations_exercised": {
+    "berserk": 873,
+    "coin": 41,
+    "footman": 291,
+    "mercenary": 56,
+    "sword": 2
+  },
+  "results": [
+    {
+      "seed": 0,
+      "armies": [
+        [
+          "swordsman",
+          "warrior_priest",
+          "mercenary",
+          "crossbowman"
+        ],
+        [
+          "marshall",
+          "lancer",
+          "pikeman",
+          "archer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 1,
+      "armies": [
+        [
+          "swordsman",
+          "warrior_priest",
+          "crossbowman",
+          "royal_guard"
+        ],
+        [
+          "berserker",
+          "marshall",
+          "light_cavalry",
+          "mercenary"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 671,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 2,
+      "armies": [
+        [
+          "royal_guard",
+          "lancer",
+          "mercenary",
+          "scout"
+        ],
+        [
+          "ensign",
+          "footman",
+          "light_cavalry",
+          "swordsman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 3,
+      "armies": [
+        [
+          "marshall",
+          "crossbowman",
+          "warrior_priest",
+          "ensign"
+        ],
+        [
+          "berserker",
+          "scout",
+          "swordsman",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 4,
+      "armies": [
+        [
+          "marshall",
+          "lancer",
+          "light_cavalry",
+          "archer"
+        ],
+        [
+          "mercenary",
+          "scout",
+          "warrior_priest",
+          "berserker"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 590,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 5,
+      "armies": [
+        [
+          "marshall",
+          "knight",
+          "light_cavalry",
+          "ensign"
+        ],
+        [
+          "berserker",
+          "footman",
+          "cavalry",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 564,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 6,
+      "armies": [
+        [
+          "berserker",
+          "footman",
+          "royal_guard",
+          "crossbowman"
+        ],
+        [
+          "archer",
+          "pikeman",
+          "cavalry",
+          "ensign"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 7,
+      "armies": [
+        [
+          "warrior_priest",
+          "light_cavalry",
+          "scout",
+          "mercenary"
+        ],
+        [
+          "ensign",
+          "archer",
+          "cavalry",
+          "swordsman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 8,
+      "armies": [
+        [
+          "footman",
+          "warrior_priest",
+          "cavalry",
+          "mercenary"
+        ],
+        [
+          "crossbowman",
+          "swordsman",
+          "royal_guard",
+          "marshall"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 9,
+      "armies": [
+        [
+          "knight",
+          "light_cavalry",
+          "archer",
+          "warrior_priest"
+        ],
+        [
+          "pikeman",
+          "ensign",
+          "cavalry",
+          "footman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 10,
+      "armies": [
+        [
+          "scout",
+          "swordsman",
+          "knight",
+          "footman"
+        ],
+        [
+          "light_cavalry",
+          "ensign",
+          "mercenary",
+          "marshall"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 11,
+      "armies": [
+        [
+          "archer",
+          "swordsman",
+          "cavalry",
+          "berserker"
+        ],
+        [
+          "pikeman",
+          "mercenary",
+          "marshall",
+          "light_cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 12,
+      "armies": [
+        [
+          "ensign",
+          "light_cavalry",
+          "scout",
+          "berserker"
+        ],
+        [
+          "swordsman",
+          "warrior_priest",
+          "royal_guard",
+          "crossbowman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 13,
+      "armies": [
+        [
+          "warrior_priest",
+          "crossbowman",
+          "lancer",
+          "marshall"
+        ],
+        [
+          "mercenary",
+          "cavalry",
+          "swordsman",
+          "footman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 14,
+      "armies": [
+        [
+          "footman",
+          "berserker",
+          "scout",
+          "archer"
+        ],
+        [
+          "light_cavalry",
+          "warrior_priest",
+          "swordsman",
+          "pikeman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 15,
+      "armies": [
+        [
+          "mercenary",
+          "lancer",
+          "knight",
+          "crossbowman"
+        ],
+        [
+          "pikeman",
+          "marshall",
+          "scout",
+          "berserker"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 473,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 16,
+      "armies": [
+        [
+          "pikeman",
+          "royal_guard",
+          "cavalry",
+          "scout"
+        ],
+        [
+          "mercenary",
+          "warrior_priest",
+          "marshall",
+          "knight"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 17,
+      "armies": [
+        [
+          "ensign",
+          "scout",
+          "pikeman",
+          "knight"
+        ],
+        [
+          "lancer",
+          "crossbowman",
+          "swordsman",
+          "footman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 18,
+      "armies": [
+        [
+          "knight",
+          "mercenary",
+          "royal_guard",
+          "archer"
+        ],
+        [
+          "scout",
+          "footman",
+          "light_cavalry",
+          "ensign"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 19,
+      "armies": [
+        [
+          "lancer",
+          "archer",
+          "berserker",
+          "crossbowman"
+        ],
+        [
+          "marshall",
+          "knight",
+          "footman",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 892,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 20,
+      "armies": [
+        [
+          "archer",
+          "royal_guard",
+          "knight",
+          "warrior_priest"
+        ],
+        [
+          "pikeman",
+          "footman",
+          "cavalry",
+          "mercenary"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 21,
+      "armies": [
+        [
+          "marshall",
+          "mercenary",
+          "scout",
+          "footman"
+        ],
+        [
+          "warrior_priest",
+          "cavalry",
+          "crossbowman",
+          "knight"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 22,
+      "armies": [
+        [
+          "ensign",
+          "berserker",
+          "knight",
+          "pikeman"
+        ],
+        [
+          "footman",
+          "cavalry",
+          "marshall",
+          "scout"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 23,
+      "armies": [
+        [
+          "light_cavalry",
+          "archer",
+          "scout",
+          "swordsman"
+        ],
+        [
+          "lancer",
+          "mercenary",
+          "cavalry",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 24,
+      "armies": [
+        [
+          "lancer",
+          "berserker",
+          "footman",
+          "light_cavalry"
+        ],
+        [
+          "mercenary",
+          "cavalry",
+          "royal_guard",
+          "swordsman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 472,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 25,
+      "armies": [
+        [
+          "knight",
+          "pikeman",
+          "berserker",
+          "marshall"
+        ],
+        [
+          "warrior_priest",
+          "crossbowman",
+          "mercenary",
+          "scout"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 514,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 26,
+      "armies": [
+        [
+          "scout",
+          "pikeman",
+          "footman",
+          "royal_guard"
+        ],
+        [
+          "knight",
+          "marshall",
+          "lancer",
+          "mercenary"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 27,
+      "armies": [
+        [
+          "light_cavalry",
+          "archer",
+          "lancer",
+          "berserker"
+        ],
+        [
+          "marshall",
+          "footman",
+          "cavalry",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 28,
+      "armies": [
+        [
+          "mercenary",
+          "royal_guard",
+          "crossbowman",
+          "footman"
+        ],
+        [
+          "scout",
+          "berserker",
+          "lancer",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 29,
+      "armies": [
+        [
+          "berserker",
+          "cavalry",
+          "lancer",
+          "ensign"
+        ],
+        [
+          "archer",
+          "mercenary",
+          "scout",
+          "knight"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 30,
+      "armies": [
+        [
+          "ensign",
+          "knight",
+          "warrior_priest",
+          "swordsman"
+        ],
+        [
+          "scout",
+          "archer",
+          "berserker",
+          "pikeman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 31,
+      "armies": [
+        [
+          "mercenary",
+          "crossbowman",
+          "warrior_priest",
+          "lancer"
+        ],
+        [
+          "cavalry",
+          "pikeman",
+          "scout",
+          "light_cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 32,
+      "armies": [
+        [
+          "warrior_priest",
+          "knight",
+          "footman",
+          "royal_guard"
+        ],
+        [
+          "archer",
+          "pikeman",
+          "lancer",
+          "ensign"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 33,
+      "armies": [
+        [
+          "knight",
+          "footman",
+          "crossbowman",
+          "scout"
+        ],
+        [
+          "lancer",
+          "warrior_priest",
+          "royal_guard",
+          "swordsman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 34,
+      "armies": [
+        [
+          "scout",
+          "swordsman",
+          "berserker",
+          "footman"
+        ],
+        [
+          "knight",
+          "marshall",
+          "lancer",
+          "cavalry"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 390,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 35,
+      "armies": [
+        [
+          "lancer",
+          "knight",
+          "berserker",
+          "swordsman"
+        ],
+        [
+          "ensign",
+          "mercenary",
+          "scout",
+          "footman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 332,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 36,
+      "armies": [
+        [
+          "scout",
+          "cavalry",
+          "warrior_priest",
+          "archer"
+        ],
+        [
+          "ensign",
+          "light_cavalry",
+          "royal_guard",
+          "footman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 37,
+      "armies": [
+        [
+          "footman",
+          "light_cavalry",
+          "mercenary",
+          "scout"
+        ],
+        [
+          "warrior_priest",
+          "royal_guard",
+          "lancer",
+          "cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 38,
+      "armies": [
+        [
+          "light_cavalry",
+          "cavalry",
+          "crossbowman",
+          "warrior_priest"
+        ],
+        [
+          "royal_guard",
+          "ensign",
+          "archer",
+          "scout"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 39,
+      "armies": [
+        [
+          "footman",
+          "ensign",
+          "berserker",
+          "warrior_priest"
+        ],
+        [
+          "pikeman",
+          "knight",
+          "crossbowman",
+          "lancer"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 40,
+      "armies": [
+        [
+          "scout",
+          "mercenary",
+          "pikeman",
+          "archer"
+        ],
+        [
+          "cavalry",
+          "crossbowman",
+          "lancer",
+          "light_cavalry"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 41,
+      "armies": [
+        [
+          "light_cavalry",
+          "mercenary",
+          "warrior_priest",
+          "pikeman"
+        ],
+        [
+          "knight",
+          "lancer",
+          "footman",
+          "berserker"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 42,
+      "armies": [
+        [
+          "light_cavalry",
+          "pikeman",
+          "archer",
+          "lancer"
+        ],
+        [
+          "scout",
+          "royal_guard",
+          "crossbowman",
+          "footman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 357,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 43,
+      "armies": [
+        [
+          "knight",
+          "warrior_priest",
+          "lancer",
+          "archer"
+        ],
+        [
+          "crossbowman",
+          "light_cavalry",
+          "berserker",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 44,
+      "armies": [
+        [
+          "mercenary",
+          "cavalry",
+          "ensign",
+          "footman"
+        ],
+        [
+          "light_cavalry",
+          "marshall",
+          "lancer",
+          "archer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 45,
+      "armies": [
+        [
+          "cavalry",
+          "archer",
+          "ensign",
+          "swordsman"
+        ],
+        [
+          "footman",
+          "knight",
+          "mercenary",
+          "pikeman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 46,
+      "armies": [
+        [
+          "royal_guard",
+          "pikeman",
+          "ensign",
+          "marshall"
+        ],
+        [
+          "swordsman",
+          "knight",
+          "mercenary",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 227,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 47,
+      "armies": [
+        [
+          "footman",
+          "swordsman",
+          "ensign",
+          "crossbowman"
+        ],
+        [
+          "scout",
+          "berserker",
+          "cavalry",
+          "archer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 48,
+      "armies": [
+        [
+          "scout",
+          "light_cavalry",
+          "pikeman",
+          "cavalry"
+        ],
+        [
+          "knight",
+          "mercenary",
+          "warrior_priest",
+          "ensign"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 49,
+      "armies": [
+        [
+          "crossbowman",
+          "lancer",
+          "archer",
+          "ensign"
+        ],
+        [
+          "berserker",
+          "swordsman",
+          "royal_guard",
+          "mercenary"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 50,
+      "armies": [
+        [
+          "ensign",
+          "knight",
+          "pikeman",
+          "archer"
+        ],
+        [
+          "royal_guard",
+          "lancer",
+          "marshall",
+          "scout"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 51,
+      "armies": [
+        [
+          "footman",
+          "knight",
+          "lancer",
+          "light_cavalry"
+        ],
+        [
+          "pikeman",
+          "berserker",
+          "swordsman",
+          "cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 52,
+      "armies": [
+        [
+          "scout",
+          "royal_guard",
+          "crossbowman",
+          "marshall"
+        ],
+        [
+          "knight",
+          "ensign",
+          "pikeman",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 53,
+      "armies": [
+        [
+          "royal_guard",
+          "crossbowman",
+          "ensign",
+          "berserker"
+        ],
+        [
+          "knight",
+          "light_cavalry",
+          "pikeman",
+          "cavalry"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 54,
+      "armies": [
+        [
+          "footman",
+          "lancer",
+          "knight",
+          "marshall"
+        ],
+        [
+          "swordsman",
+          "royal_guard",
+          "pikeman",
+          "crossbowman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 55,
+      "armies": [
+        [
+          "cavalry",
+          "berserker",
+          "knight",
+          "warrior_priest"
+        ],
+        [
+          "scout",
+          "crossbowman",
+          "ensign",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 56,
+      "armies": [
+        [
+          "ensign",
+          "royal_guard",
+          "light_cavalry",
+          "knight"
+        ],
+        [
+          "cavalry",
+          "lancer",
+          "archer",
+          "marshall"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 57,
+      "armies": [
+        [
+          "light_cavalry",
+          "warrior_priest",
+          "crossbowman",
+          "swordsman"
+        ],
+        [
+          "knight",
+          "mercenary",
+          "ensign",
+          "cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 58,
+      "armies": [
+        [
+          "swordsman",
+          "knight",
+          "ensign",
+          "pikeman"
+        ],
+        [
+          "footman",
+          "berserker",
+          "archer",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 59,
+      "armies": [
+        [
+          "swordsman",
+          "lancer",
+          "berserker",
+          "ensign"
+        ],
+        [
+          "light_cavalry",
+          "pikeman",
+          "footman",
+          "scout"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 60,
+      "armies": [
+        [
+          "cavalry",
+          "archer",
+          "warrior_priest",
+          "royal_guard"
+        ],
+        [
+          "mercenary",
+          "marshall",
+          "footman",
+          "swordsman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 61,
+      "armies": [
+        [
+          "royal_guard",
+          "light_cavalry",
+          "marshall",
+          "warrior_priest"
+        ],
+        [
+          "ensign",
+          "archer",
+          "berserker",
+          "crossbowman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 653,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 62,
+      "armies": [
+        [
+          "light_cavalry",
+          "lancer",
+          "warrior_priest",
+          "pikeman"
+        ],
+        [
+          "berserker",
+          "archer",
+          "royal_guard",
+          "scout"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 63,
+      "armies": [
+        [
+          "berserker",
+          "crossbowman",
+          "swordsman",
+          "light_cavalry"
+        ],
+        [
+          "scout",
+          "marshall",
+          "knight",
+          "mercenary"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 64,
+      "armies": [
+        [
+          "light_cavalry",
+          "crossbowman",
+          "ensign",
+          "swordsman"
+        ],
+        [
+          "pikeman",
+          "cavalry",
+          "warrior_priest",
+          "knight"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 65,
+      "armies": [
+        [
+          "light_cavalry",
+          "footman",
+          "ensign",
+          "scout"
+        ],
+        [
+          "lancer",
+          "mercenary",
+          "swordsman",
+          "marshall"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 66,
+      "armies": [
+        [
+          "scout",
+          "warrior_priest",
+          "berserker",
+          "archer"
+        ],
+        [
+          "crossbowman",
+          "cavalry",
+          "marshall",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 67,
+      "armies": [
+        [
+          "marshall",
+          "crossbowman",
+          "scout",
+          "royal_guard"
+        ],
+        [
+          "footman",
+          "knight",
+          "swordsman",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 223,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 68,
+      "armies": [
+        [
+          "knight",
+          "light_cavalry",
+          "royal_guard",
+          "swordsman"
+        ],
+        [
+          "crossbowman",
+          "pikeman",
+          "marshall",
+          "footman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 69,
+      "armies": [
+        [
+          "berserker",
+          "knight",
+          "crossbowman",
+          "footman"
+        ],
+        [
+          "lancer",
+          "marshall",
+          "cavalry",
+          "ensign"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 70,
+      "armies": [
+        [
+          "scout",
+          "archer",
+          "ensign",
+          "berserker"
+        ],
+        [
+          "knight",
+          "swordsman",
+          "pikeman",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 71,
+      "armies": [
+        [
+          "crossbowman",
+          "swordsman",
+          "mercenary",
+          "archer"
+        ],
+        [
+          "warrior_priest",
+          "knight",
+          "footman",
+          "lancer"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 72,
+      "armies": [
+        [
+          "mercenary",
+          "knight",
+          "light_cavalry",
+          "marshall"
+        ],
+        [
+          "pikeman",
+          "cavalry",
+          "archer",
+          "swordsman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 73,
+      "armies": [
+        [
+          "ensign",
+          "marshall",
+          "swordsman",
+          "mercenary"
+        ],
+        [
+          "crossbowman",
+          "knight",
+          "berserker",
+          "royal_guard"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 74,
+      "armies": [
+        [
+          "light_cavalry",
+          "cavalry",
+          "berserker",
+          "mercenary"
+        ],
+        [
+          "scout",
+          "ensign",
+          "pikeman",
+          "lancer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 75,
+      "armies": [
+        [
+          "marshall",
+          "warrior_priest",
+          "berserker",
+          "scout"
+        ],
+        [
+          "archer",
+          "mercenary",
+          "light_cavalry",
+          "cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 321,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 76,
+      "armies": [
+        [
+          "footman",
+          "marshall",
+          "warrior_priest",
+          "cavalry"
+        ],
+        [
+          "mercenary",
+          "archer",
+          "ensign",
+          "lancer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 77,
+      "armies": [
+        [
+          "ensign",
+          "swordsman",
+          "crossbowman",
+          "archer"
+        ],
+        [
+          "marshall",
+          "lancer",
+          "berserker",
+          "cavalry"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 414,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 78,
+      "armies": [
+        [
+          "marshall",
+          "cavalry",
+          "mercenary",
+          "crossbowman"
+        ],
+        [
+          "ensign",
+          "scout",
+          "archer",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 79,
+      "armies": [
+        [
+          "mercenary",
+          "scout",
+          "light_cavalry",
+          "knight"
+        ],
+        [
+          "crossbowman",
+          "swordsman",
+          "cavalry",
+          "footman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 80,
+      "armies": [
+        [
+          "warrior_priest",
+          "marshall",
+          "royal_guard",
+          "lancer"
+        ],
+        [
+          "swordsman",
+          "pikeman",
+          "scout",
+          "archer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 81,
+      "armies": [
+        [
+          "swordsman",
+          "pikeman",
+          "footman",
+          "crossbowman"
+        ],
+        [
+          "berserker",
+          "ensign",
+          "lancer",
+          "archer"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 82,
+      "armies": [
+        [
+          "lancer",
+          "mercenary",
+          "cavalry",
+          "warrior_priest"
+        ],
+        [
+          "crossbowman",
+          "swordsman",
+          "berserker",
+          "knight"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 83,
+      "armies": [
+        [
+          "lancer",
+          "knight",
+          "archer",
+          "ensign"
+        ],
+        [
+          "royal_guard",
+          "pikeman",
+          "marshall",
+          "scout"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 84,
+      "armies": [
+        [
+          "archer",
+          "berserker",
+          "footman",
+          "mercenary"
+        ],
+        [
+          "ensign",
+          "crossbowman",
+          "royal_guard",
+          "swordsman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 85,
+      "armies": [
+        [
+          "scout",
+          "pikeman",
+          "knight",
+          "footman"
+        ],
+        [
+          "light_cavalry",
+          "mercenary",
+          "berserker",
+          "ensign"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 86,
+      "armies": [
+        [
+          "scout",
+          "mercenary",
+          "cavalry",
+          "ensign"
+        ],
+        [
+          "light_cavalry",
+          "berserker",
+          "marshall",
+          "crossbowman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 571,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 87,
+      "armies": [
+        [
+          "footman",
+          "royal_guard",
+          "archer",
+          "ensign"
+        ],
+        [
+          "mercenary",
+          "light_cavalry",
+          "berserker",
+          "lancer"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 562,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 88,
+      "armies": [
+        [
+          "footman",
+          "knight",
+          "crossbowman",
+          "cavalry"
+        ],
+        [
+          "archer",
+          "berserker",
+          "swordsman",
+          "mercenary"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 732,
+      "status": "finished",
+      "winner": 1
+    },
+    {
+      "seed": 89,
+      "armies": [
+        [
+          "light_cavalry",
+          "berserker",
+          "mercenary",
+          "footman"
+        ],
+        [
+          "archer",
+          "swordsman",
+          "cavalry",
+          "marshall"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 90,
+      "armies": [
+        [
+          "pikeman",
+          "crossbowman",
+          "archer",
+          "swordsman"
+        ],
+        [
+          "light_cavalry",
+          "royal_guard",
+          "ensign",
+          "footman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 91,
+      "armies": [
+        [
+          "mercenary",
+          "scout",
+          "knight",
+          "archer"
+        ],
+        [
+          "marshall",
+          "crossbowman",
+          "ensign",
+          "pikeman"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 92,
+      "armies": [
+        [
+          "knight",
+          "swordsman",
+          "lancer",
+          "berserker"
+        ],
+        [
+          "cavalry",
+          "mercenary",
+          "royal_guard",
+          "light_cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 93,
+      "armies": [
+        [
+          "swordsman",
+          "warrior_priest",
+          "lancer",
+          "archer"
+        ],
+        [
+          "royal_guard",
+          "knight",
+          "mercenary",
+          "light_cavalry"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 94,
+      "armies": [
+        [
+          "knight",
+          "scout",
+          "footman",
+          "berserker"
+        ],
+        [
+          "royal_guard",
+          "archer",
+          "cavalry",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 673,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 95,
+      "armies": [
+        [
+          "royal_guard",
+          "knight",
+          "mercenary",
+          "crossbowman"
+        ],
+        [
+          "pikeman",
+          "cavalry",
+          "swordsman",
+          "lancer"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 96,
+      "armies": [
+        [
+          "scout",
+          "swordsman",
+          "cavalry",
+          "royal_guard"
+        ],
+        [
+          "lancer",
+          "archer",
+          "footman",
+          "warrior_priest"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 97,
+      "armies": [
+        [
+          "lancer",
+          "knight",
+          "footman",
+          "marshall"
+        ],
+        [
+          "scout",
+          "light_cavalry",
+          "swordsman",
+          "mercenary"
+        ]
+      ],
+      "initiative": 1,
+      "actions": 223,
+      "status": "finished",
+      "winner": 0
+    },
+    {
+      "seed": 98,
+      "armies": [
+        [
+          "knight",
+          "scout",
+          "archer",
+          "light_cavalry"
+        ],
+        [
+          "lancer",
+          "ensign",
+          "mercenary",
+          "footman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    },
+    {
+      "seed": 99,
+      "armies": [
+        [
+          "mercenary",
+          "marshall",
+          "light_cavalry",
+          "pikeman"
+        ],
+        [
+          "archer",
+          "footman",
+          "knight",
+          "crossbowman"
+        ]
+      ],
+      "initiative": 0,
+      "actions": 1000,
+      "status": "truncated",
+      "winner": null
+    }
+  ]
+}

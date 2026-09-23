@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b28">
+  <meta name="description" content="战争之匣双人在线对战。招募军队，调遣兵种，争夺六处据点。">
+  <title>战争之匣 · War Chest Online</title>
+  <link rel="icon" href="/static/crest.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true"><defs id="icon-defs"></defs></svg>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="战争之匣首页"><img src="/static/crest.svg" alt=""><span>战争之匣<small>WAR CHEST ONLINE</small></span></a>
+    <nav aria-label="主导航"><button class="nav-link active" id="nav-play">对战大厅</button><button class="nav-link" id="nav-units">兵种图鉴 <span>35</span></button><button class="nav-link" id="nav-help">游戏指南</button></nav>
+    <div class="header-note"><i></i> 双人策略对战</div>
+  </header>
+  <main>
+    <div class="page-heading"><div><div class="eyebrow">THE ART OF COMMAND</div><h1>每一枚币，都是一步谋略<span>。</span></h1><p>招募你的军队，掌握战场的主动权。</p></div><div class="edition"><span class="edition-mark">Ⅰ</span><div>基础版与四大扩展<small>2 PLAYERS / CLASSIC BATTLE</small></div></div></div>
+    <div class="game-layout">
+      <aside class="left-column" id="room-sidebar"><button class="sidebar-close" data-close-sidebar>收起房间 ×</button>
+        <section class="panel room-panel"><div class="panel-label"><span>对战房间</span><span class="small-label" id="room-badge">FRIEND MATCH</span></div><div id="room-content"><p class="muted">正在准备棋盘…</p></div></section>
+        <section class="panel objective-panel"><span class="eyebrow">VICTORY CONDITION</span><h2>六处据点，一场胜利</h2><p>控制六个据点，赢得这场战争。<br>移动到据点后，需要另行控制。</p><div class="objective-hexes">⬡ ⬡ ⬡ ⬡ ⬡ ⬡</div><div class="legend"><span><i class="legend-dot neutral"></i>中立据点</span><span><i class="legend-dot red"></i>你的阵营</span><span><i class="legend-dot blue"></i>对手阵营</span></div></section>
+        <button class="guide-card" id="quick-guide"><span class="guide-icon">?</span><span>第一次指挥军队？<small>一分钟了解操作方式</small></span><span>↗</span></button>
+        <div class="quiet-note">无需注册 · 分享房间即可开战<br>每一步都会自动保存</div>
+      </aside>
+      <section class="arena" aria-label="对战棋盘">
+        <div class="arena-toolbar"><span><span class="live-dot" id="connection-dot"></span><span id="arena-mode">战场预览</span></span><span id="round-tag">ROUND 01</span><div class="toolbar-buttons"><button class="compact-tool" id="toggle-room" aria-controls="room-sidebar" aria-expanded="false">房间</button><button class="compact-tool" id="toggle-info" aria-controls="info-sidebar" aria-expanded="false">档案 / 记录</button><button class="icon-button" id="show-decrees" aria-label="查看本局法令" title="本局法令" hidden>令</button><button class="icon-button" id="toggle-coords" aria-label="显示坐标" title="显示坐标">⌗</button><button class="icon-button" id="toggle-sound" aria-label="开启音效" title="开启音效">♪</button><button class="icon-button" id="board-help" aria-label="游戏规则" title="游戏规则">?</button></div></div>
+        <div id="opponent-zone" class="player-zone opponent"></div>
+        <div class="battlefield"><div class="board-decoration top">✦</div><svg id="board" viewBox="68 48 504 554" role="group" aria-label="六边形棋盘"></svg><div class="board-compass" aria-hidden="true">N<br>╱╲</div><div class="board-corner left">WAR<br>CHEST</div><div class="board-corner right">STRATEGY<br>OVER CHANCE</div></div>
+        <div class="turn-banner" id="turn-banner" role="status" aria-live="polite"><span>✦</span> 正在准备战场</div>
+        <div id="self-zone" class="player-zone self"></div>
+        <div id="decision-strip" class="decision-strip" hidden></div>
+        <div class="arena-footer"><span>双人对战 · 战争之匣</span><span id="save-status">等待创建房间</span></div>
+      </section>
+      <aside class="right-column" id="info-sidebar"><button class="sidebar-close" data-close-sidebar>收起档案与记录 ×</button>
+        <section class="panel unit-panel"><div class="panel-label"><span>兵种档案</span><button class="text-button" id="all-units">全部兵种 ↗</button></div><div id="unit-detail"></div></section>
+        <section class="panel log-panel"><div class="panel-label"><span>战场记录</span><span class="small-label">BATTLE LOG</span></div><div id="battle-log" class="battle-log"><div class="empty-log"><span>♜</span><p>战局由你开启</p><small>双方行动将在这里记录</small></div></div></section>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>WAR CHEST <b>·</b> 战争之匣</span><span>运筹方寸之间</span><span>35 个兵种条目 · 四大扩展</span></footer>
+  </main>
+  <dialog id="action-dialog" class="action-dialog"><button class="dialog-close" data-close="action-dialog" aria-label="关闭行动菜单">×</button><div id="action-content"></div></dialog>
+  <dialog id="general-dialog" class="general-dialog"><button class="dialog-close" data-close="general-dialog" aria-label="关闭弹窗">×</button><div id="general-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript>请启用 JavaScript 以显示棋盘和参与在线对战。</noscript>
+</body>
+</html>

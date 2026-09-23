@@ -1,0 +1,2041 @@
+{
+  "games": [
+    {
+      "seed": 0,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "scout",
+          "marshall",
+          "archer",
+          "footman"
+        ],
+        [
+          "pikeman",
+          "skirmisher",
+          "war_drummer",
+          "trebuchet"
+        ]
+      ]
+    },
+    {
+      "seed": 1,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "siege_tower",
+          "knight",
+          "bannerman",
+          "war_wagon"
+        ],
+        [
+          "cavalry",
+          "warlord",
+          "bishop",
+          "earl"
+        ]
+      ]
+    },
+    {
+      "seed": 2,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "crossbowman",
+          "warrior_priest",
+          "bishop",
+          "saboteur"
+        ],
+        [
+          "scout",
+          "bannerman",
+          "war_wagon",
+          "lancer"
+        ]
+      ]
+    },
+    {
+      "seed": 3,
+      "steps": 665,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "warlord",
+          "knight",
+          "cavalry",
+          "pikeman"
+        ],
+        [
+          "infiltrator",
+          "crossbowman",
+          "vanguard",
+          "saboteur"
+        ]
+      ]
+    },
+    {
+      "seed": 4,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "bannerman",
+          "vanguard",
+          "scout",
+          "mercenary"
+        ],
+        [
+          "berserker",
+          "herald",
+          "infiltrator",
+          "knight"
+        ]
+      ]
+    },
+    {
+      "seed": 5,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "crossbowman",
+          "raider",
+          "war_drummer",
+          "assassin"
+        ],
+        [
+          "scout",
+          "royal_guard",
+          "cavalry",
+          "marshall"
+        ]
+      ]
+    },
+    {
+      "seed": 6,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "bishop",
+          "assassin",
+          "marshall",
+          "mercenary"
+        ],
+        [
+          "siege_tower",
+          "trebuchet",
+          "war_drummer",
+          "earl"
+        ]
+      ]
+    },
+    {
+      "seed": 7,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "ensign",
+          "pikeman",
+          "archer",
+          "berserker"
+        ],
+        [
+          "swordsman",
+          "infiltrator",
+          "lancer",
+          "vanguard"
+        ]
+      ]
+    },
+    {
+      "seed": 8,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "bannerman",
+          "skirmisher",
+          "pitch_thrower",
+          "herald"
+        ],
+        [
+          "crossbowman",
+          "ensign",
+          "knight",
+          "sapper"
+        ]
+      ]
+    },
+    {
+      "seed": 9,
+      "steps": 272,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "royal_guard",
+          "vanguard",
+          "earl",
+          "archer"
+        ],
+        [
+          "assassin",
+          "bishop",
+          "swordsman",
+          "crossbowman"
+        ]
+      ]
+    },
+    {
+      "seed": 10,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "cavalry",
+          "ensign",
+          "siege_tower",
+          "footman"
+        ],
+        [
+          "bannerman",
+          "earl",
+          "skirmisher",
+          "herald"
+        ]
+      ]
+    },
+    {
+      "seed": 11,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "ensign",
+          "scout",
+          "siege_tower",
+          "pikeman"
+        ],
+        [
+          "trebuchet",
+          "rearguard",
+          "marshall",
+          "earl"
+        ]
+      ]
+    },
+    {
+      "seed": 12,
+      "steps": 240,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "earl",
+          "sapper",
+          "warrior_priest",
+          "siege_tower"
+        ],
+        [
+          "knight",
+          "crossbowman",
+          "war_wagon",
+          "bannerman"
+        ]
+      ]
+    },
+    {
+      "seed": 13,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "lancer",
+          "warrior_priest",
+          "bannerman",
+          "warlord"
+        ],
+        [
+          "berserker",
+          "siege_tower",
+          "rearguard",
+          "royal_guard"
+        ]
+      ]
+    },
+    {
+      "seed": 14,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "lancer",
+          "light_cavalry",
+          "herald",
+          "scout"
+        ],
+        [
+          "warrior_priest",
+          "cavalry",
+          "knight",
+          "pikeman"
+        ]
+      ]
+    },
+    {
+      "seed": 15,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "vanguard",
+          "warrior_priest",
+          "cavalry",
+          "trebuchet"
+        ],
+        [
+          "archer",
+          "mercenary",
+          "lancer",
+          "sapper"
+        ]
+      ]
+    },
+    {
+      "seed": 16,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "mercenary",
+          "trebuchet",
+          "earl",
+          "ensign"
+        ],
+        [
+          "scout",
+          "sapper",
+          "light_cavalry",
+          "siege_tower"
+        ]
+      ]
+    },
+    {
+      "seed": 17,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "light_cavalry",
+          "saboteur",
+          "ensign",
+          "bishop"
+        ],
+        [
+          "vanguard",
+          "scout",
+          "pitch_thrower",
+          "assassin"
+        ]
+      ]
+    },
+    {
+      "seed": 18,
+      "steps": 788,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "bishop",
+          "heavy_cavalry",
+          "light_cavalry",
+          "cavalry"
+        ],
+        [
+          "scout",
+          "war_wagon",
+          "warlord",
+          "pikeman"
+        ]
+      ]
+    },
+    {
+      "seed": 19,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "archer",
+          "knight",
+          "raider",
+          "skirmisher"
+        ],
+        [
+          "lancer",
+          "mercenary",
+          "warrior_priest",
+          "infiltrator"
+        ]
+      ]
+    },
+    {
+      "seed": 20,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "war_drummer",
+          "swordsman",
+          "warlord",
+          "knight"
+        ],
+        [
+          "bishop",
+          "heavy_cavalry",
+          "crossbowman",
+          "assassin"
+        ]
+      ]
+    },
+    {
+      "seed": 21,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "infiltrator",
+          "lancer",
+          "bishop",
+          "pikeman"
+        ],
+        [
+          "knight",
+          "sapper",
+          "light_cavalry",
+          "archer"
+        ]
+      ]
+    },
+    {
+      "seed": 22,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "war_drummer",
+          "bannerman",
+          "rearguard",
+          "knight"
+        ],
+        [
+          "mercenary",
+          "ensign",
+          "vanguard",
+          "cavalry"
+        ]
+      ]
+    },
+    {
+      "seed": 23,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "cavalry",
+          "trebuchet",
+          "archer",
+          "saboteur"
+        ],
+        [
+          "ensign",
+          "sapper",
+          "warrior_priest",
+          "bannerman"
+        ]
+      ]
+    },
+    {
+      "seed": 24,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "ensign",
+          "light_cavalry",
+          "war_drummer",
+          "rearguard"
+        ],
+        [
+          "infiltrator",
+          "lancer",
+          "skirmisher",
+          "archer"
+        ]
+      ]
+    },
+    {
+      "seed": 25,
+      "steps": 493,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "mercenary",
+          "lancer",
+          "berserker",
+          "bannerman"
+        ],
+        [
+          "warrior_priest",
+          "assassin",
+          "knight",
+          "infiltrator"
+        ]
+      ]
+    },
+    {
+      "seed": 26,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "light_cavalry",
+          "bishop",
+          "heavy_cavalry",
+          "mercenary"
+        ],
+        [
+          "trebuchet",
+          "swordsman",
+          "bannerman",
+          "royal_guard"
+        ]
+      ]
+    },
+    {
+      "seed": 27,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "earl",
+          "siege_tower",
+          "assassin",
+          "trebuchet"
+        ],
+        [
+          "war_wagon",
+          "mercenary",
+          "war_drummer",
+          "bishop"
+        ]
+      ]
+    },
+    {
+      "seed": 28,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "saboteur",
+          "vanguard",
+          "warlord",
+          "warrior_priest"
+        ],
+        [
+          "trebuchet",
+          "ensign",
+          "war_wagon",
+          "pikeman"
+        ]
+      ]
+    },
+    {
+      "seed": 29,
+      "steps": 720,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "infiltrator",
+          "trebuchet",
+          "berserker",
+          "swordsman"
+        ],
+        [
+          "royal_guard",
+          "war_drummer",
+          "bannerman",
+          "saboteur"
+        ]
+      ]
+    },
+    {
+      "seed": 30,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "siege_tower",
+          "earl",
+          "heavy_cavalry",
+          "marshall"
+        ],
+        [
+          "herald",
+          "berserker",
+          "knight",
+          "raider"
+        ]
+      ]
+    },
+    {
+      "seed": 31,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "skirmisher",
+          "scout",
+          "archer",
+          "berserker"
+        ],
+        [
+          "trebuchet",
+          "siege_tower",
+          "pitch_thrower",
+          "swordsman"
+        ]
+      ]
+    },
+    {
+      "seed": 32,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "light_cavalry",
+          "saboteur",
+          "war_drummer",
+          "crossbowman"
+        ],
+        [
+          "ensign",
+          "earl",
+          "scout",
+          "pikeman"
+        ]
+      ]
+    },
+    {
+      "seed": 33,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "warlord",
+          "mercenary",
+          "archer",
+          "herald"
+        ],
+        [
+          "raider",
+          "scout",
+          "warrior_priest",
+          "saboteur"
+        ]
+      ]
+    },
+    {
+      "seed": 34,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "warlord",
+          "war_drummer",
+          "footman",
+          "siege_tower"
+        ],
+        [
+          "swordsman",
+          "saboteur",
+          "light_cavalry",
+          "scout"
+        ]
+      ]
+    },
+    {
+      "seed": 35,
+      "steps": 279,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "berserker",
+          "vanguard",
+          "infiltrator",
+          "earl"
+        ],
+        [
+          "bishop",
+          "trebuchet",
+          "knight",
+          "swordsman"
+        ]
+      ]
+    },
+    {
+      "seed": 36,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "knight",
+          "lancer",
+          "ensign",
+          "pikeman"
+        ],
+        [
+          "swordsman",
+          "earl",
+          "assassin",
+          "cavalry"
+        ]
+      ]
+    },
+    {
+      "seed": 37,
+      "steps": 364,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "trebuchet",
+          "assassin",
+          "heavy_cavalry",
+          "earl"
+        ],
+        [
+          "scout",
+          "pitch_thrower",
+          "berserker",
+          "footman"
+        ]
+      ]
+    },
+    {
+      "seed": 38,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "scout",
+          "pikeman",
+          "assassin",
+          "pitch_thrower"
+        ],
+        [
+          "heavy_cavalry",
+          "bishop",
+          "earl",
+          "swordsman"
+        ]
+      ]
+    },
+    {
+      "seed": 39,
+      "steps": 218,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "heavy_cavalry",
+          "assassin",
+          "raider",
+          "siege_tower"
+        ],
+        [
+          "swordsman",
+          "earl",
+          "berserker",
+          "vanguard"
+        ]
+      ]
+    },
+    {
+      "seed": 40,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "berserker",
+          "royal_guard",
+          "mercenary",
+          "bannerman"
+        ],
+        [
+          "light_cavalry",
+          "warlord",
+          "earl",
+          "trebuchet"
+        ]
+      ]
+    },
+    {
+      "seed": 41,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "saboteur",
+          "marshall",
+          "lancer",
+          "pitch_thrower"
+        ],
+        [
+          "warrior_priest",
+          "earl",
+          "war_drummer",
+          "trebuchet"
+        ]
+      ]
+    },
+    {
+      "seed": 42,
+      "steps": 381,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "knight",
+          "herald",
+          "cavalry",
+          "lancer"
+        ],
+        [
+          "skirmisher",
+          "swordsman",
+          "rearguard",
+          "war_drummer"
+        ]
+      ]
+    },
+    {
+      "seed": 43,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "royal_guard",
+          "rearguard",
+          "pikeman",
+          "footman"
+        ],
+        [
+          "heavy_cavalry",
+          "war_drummer",
+          "warlord",
+          "siege_tower"
+        ]
+      ]
+    },
+    {
+      "seed": 44,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "berserker",
+          "pikeman",
+          "war_drummer",
+          "mercenary"
+        ],
+        [
+          "assassin",
+          "crossbowman",
+          "knight",
+          "skirmisher"
+        ]
+      ]
+    },
+    {
+      "seed": 45,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "raider",
+          "knight",
+          "bishop",
+          "mercenary"
+        ],
+        [
+          "light_cavalry",
+          "marshall",
+          "warrior_priest",
+          "herald"
+        ]
+      ]
+    },
+    {
+      "seed": 46,
+      "steps": 345,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "lancer",
+          "pitch_thrower",
+          "knight",
+          "royal_guard"
+        ],
+        [
+          "infiltrator",
+          "sapper",
+          "marshall",
+          "swordsman"
+        ]
+      ]
+    },
+    {
+      "seed": 47,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "warrior_priest",
+          "warlord",
+          "swordsman",
+          "mercenary"
+        ],
+        [
+          "royal_guard",
+          "assassin",
+          "footman",
+          "trebuchet"
+        ]
+      ]
+    },
+    {
+      "seed": 48,
+      "steps": 407,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "bannerman",
+          "assassin",
+          "berserker",
+          "rearguard"
+        ],
+        [
+          "scout",
+          "warlord",
+          "raider",
+          "lancer"
+        ]
+      ]
+    },
+    {
+      "seed": 49,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "warrior_priest",
+          "saboteur",
+          "vanguard",
+          "siege_tower"
+        ],
+        [
+          "ensign",
+          "light_cavalry",
+          "skirmisher",
+          "infiltrator"
+        ]
+      ]
+    },
+    {
+      "seed": 50,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "war_wagon",
+          "footman",
+          "royal_guard",
+          "herald"
+        ],
+        [
+          "raider",
+          "trebuchet",
+          "lancer",
+          "ensign"
+        ]
+      ]
+    },
+    {
+      "seed": 51,
+      "steps": 258,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "swordsman",
+          "war_drummer",
+          "knight",
+          "raider"
+        ],
+        [
+          "warlord",
+          "light_cavalry",
+          "pikeman",
+          "scout"
+        ]
+      ]
+    },
+    {
+      "seed": 52,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "trebuchet",
+          "mercenary",
+          "swordsman",
+          "raider"
+        ],
+        [
+          "rearguard",
+          "bishop",
+          "warrior_priest",
+          "pikeman"
+        ]
+      ]
+    },
+    {
+      "seed": 53,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "sapper",
+          "war_drummer",
+          "crossbowman",
+          "lancer"
+        ],
+        [
+          "vanguard",
+          "warrior_priest",
+          "trebuchet",
+          "royal_guard"
+        ]
+      ]
+    },
+    {
+      "seed": 54,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "pikeman",
+          "war_drummer",
+          "war_wagon",
+          "bannerman"
+        ],
+        [
+          "archer",
+          "heavy_cavalry",
+          "berserker",
+          "earl"
+        ]
+      ]
+    },
+    {
+      "seed": 55,
+      "steps": 461,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "warlord",
+          "footman",
+          "infiltrator",
+          "assassin"
+        ],
+        [
+          "bishop",
+          "swordsman",
+          "cavalry",
+          "royal_guard"
+        ]
+      ]
+    },
+    {
+      "seed": 56,
+      "steps": 642,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "bishop",
+          "swordsman",
+          "marshall",
+          "heavy_cavalry"
+        ],
+        [
+          "knight",
+          "sapper",
+          "light_cavalry",
+          "footman"
+        ]
+      ]
+    },
+    {
+      "seed": 57,
+      "steps": 437,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "herald",
+          "ensign",
+          "mercenary",
+          "berserker"
+        ],
+        [
+          "warrior_priest",
+          "light_cavalry",
+          "swordsman",
+          "war_wagon"
+        ]
+      ]
+    },
+    {
+      "seed": 58,
+      "steps": 289,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "raider",
+          "skirmisher",
+          "earl",
+          "pitch_thrower"
+        ],
+        [
+          "bannerman",
+          "berserker",
+          "saboteur",
+          "assassin"
+        ]
+      ]
+    },
+    {
+      "seed": 59,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "footman",
+          "mercenary",
+          "pikeman",
+          "ensign"
+        ],
+        [
+          "herald",
+          "trebuchet",
+          "warrior_priest",
+          "heavy_cavalry"
+        ]
+      ]
+    },
+    {
+      "seed": 60,
+      "steps": 701,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "raider",
+          "infiltrator",
+          "lancer",
+          "assassin"
+        ],
+        [
+          "bishop",
+          "cavalry",
+          "royal_guard",
+          "berserker"
+        ]
+      ]
+    },
+    {
+      "seed": 61,
+      "steps": 1452,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "cavalry",
+          "pikeman",
+          "knight",
+          "infiltrator"
+        ],
+        [
+          "ensign",
+          "earl",
+          "warlord",
+          "pitch_thrower"
+        ]
+      ]
+    },
+    {
+      "seed": 62,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "royal_guard",
+          "marshall",
+          "herald",
+          "light_cavalry"
+        ],
+        [
+          "trebuchet",
+          "earl",
+          "cavalry",
+          "bishop"
+        ]
+      ]
+    },
+    {
+      "seed": 63,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "trebuchet",
+          "swordsman",
+          "warrior_priest",
+          "footman"
+        ],
+        [
+          "bishop",
+          "raider",
+          "infiltrator",
+          "heavy_cavalry"
+        ]
+      ]
+    },
+    {
+      "seed": 64,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "trebuchet",
+          "light_cavalry",
+          "swordsman",
+          "royal_guard"
+        ],
+        [
+          "siege_tower",
+          "assassin",
+          "knight",
+          "berserker"
+        ]
+      ]
+    },
+    {
+      "seed": 65,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "heavy_cavalry",
+          "ensign",
+          "footman",
+          "pikeman"
+        ],
+        [
+          "archer",
+          "assassin",
+          "herald",
+          "bishop"
+        ]
+      ]
+    },
+    {
+      "seed": 66,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "heavy_cavalry",
+          "infiltrator",
+          "saboteur",
+          "warlord"
+        ],
+        [
+          "swordsman",
+          "vanguard",
+          "light_cavalry",
+          "herald"
+        ]
+      ]
+    },
+    {
+      "seed": 67,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "bishop",
+          "raider",
+          "vanguard",
+          "warlord"
+        ],
+        [
+          "siege_tower",
+          "war_drummer",
+          "lancer",
+          "herald"
+        ]
+      ]
+    },
+    {
+      "seed": 68,
+      "steps": 408,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "bishop",
+          "knight",
+          "footman",
+          "siege_tower"
+        ],
+        [
+          "raider",
+          "berserker",
+          "lancer",
+          "war_drummer"
+        ]
+      ]
+    },
+    {
+      "seed": 69,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "trebuchet",
+          "royal_guard",
+          "cavalry",
+          "pikeman"
+        ],
+        [
+          "archer",
+          "raider",
+          "vanguard",
+          "bishop"
+        ]
+      ]
+    },
+    {
+      "seed": 70,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "heavy_cavalry",
+          "light_cavalry",
+          "pikeman",
+          "knight"
+        ],
+        [
+          "assassin",
+          "cavalry",
+          "warlord",
+          "crossbowman"
+        ]
+      ]
+    },
+    {
+      "seed": 71,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "ensign",
+          "vanguard",
+          "war_drummer",
+          "bishop"
+        ],
+        [
+          "scout",
+          "light_cavalry",
+          "rearguard",
+          "marshall"
+        ]
+      ]
+    },
+    {
+      "seed": 72,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "crossbowman",
+          "herald",
+          "warrior_priest",
+          "footman"
+        ],
+        [
+          "infiltrator",
+          "lancer",
+          "earl",
+          "bishop"
+        ]
+      ]
+    },
+    {
+      "seed": 73,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "infiltrator",
+          "warrior_priest",
+          "heavy_cavalry",
+          "raider"
+        ],
+        [
+          "rearguard",
+          "skirmisher",
+          "bannerman",
+          "trebuchet"
+        ]
+      ]
+    },
+    {
+      "seed": 74,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "warlord",
+          "saboteur",
+          "ensign",
+          "royal_guard"
+        ],
+        [
+          "cavalry",
+          "archer",
+          "scout",
+          "pitch_thrower"
+        ]
+      ]
+    },
+    {
+      "seed": 75,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "warrior_priest",
+          "mercenary",
+          "vanguard",
+          "herald"
+        ],
+        [
+          "sapper",
+          "trebuchet",
+          "royal_guard",
+          "rearguard"
+        ]
+      ]
+    },
+    {
+      "seed": 76,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "bishop",
+          "trebuchet",
+          "vanguard",
+          "cavalry"
+        ],
+        [
+          "light_cavalry",
+          "war_drummer",
+          "raider",
+          "war_wagon"
+        ]
+      ]
+    },
+    {
+      "seed": 77,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "pikeman",
+          "bannerman",
+          "war_drummer",
+          "saboteur"
+        ],
+        [
+          "assassin",
+          "knight",
+          "herald",
+          "scout"
+        ]
+      ]
+    },
+    {
+      "seed": 78,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "berserker",
+          "pitch_thrower",
+          "herald",
+          "heavy_cavalry"
+        ],
+        [
+          "rearguard",
+          "bannerman",
+          "vanguard",
+          "saboteur"
+        ]
+      ]
+    },
+    {
+      "seed": 79,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "war_drummer",
+          "marshall",
+          "light_cavalry",
+          "bishop"
+        ],
+        [
+          "saboteur",
+          "berserker",
+          "trebuchet",
+          "rearguard"
+        ]
+      ]
+    },
+    {
+      "seed": 80,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "assassin",
+          "sapper",
+          "berserker",
+          "bishop"
+        ],
+        [
+          "footman",
+          "pikeman",
+          "ensign",
+          "cavalry"
+        ]
+      ]
+    },
+    {
+      "seed": 81,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "mercenary",
+          "sapper",
+          "warlord",
+          "saboteur"
+        ],
+        [
+          "herald",
+          "pitch_thrower",
+          "lancer",
+          "skirmisher"
+        ]
+      ]
+    },
+    {
+      "seed": 82,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "assassin",
+          "pitch_thrower",
+          "bannerman",
+          "swordsman"
+        ],
+        [
+          "archer",
+          "war_drummer",
+          "infiltrator",
+          "saboteur"
+        ]
+      ]
+    },
+    {
+      "seed": 83,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "pitch_thrower",
+          "archer",
+          "warrior_priest",
+          "warlord"
+        ],
+        [
+          "ensign",
+          "lancer",
+          "raider",
+          "royal_guard"
+        ]
+      ]
+    },
+    {
+      "seed": 84,
+      "steps": 605,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "footman",
+          "warlord",
+          "cavalry",
+          "heavy_cavalry"
+        ],
+        [
+          "swordsman",
+          "war_drummer",
+          "herald",
+          "ensign"
+        ]
+      ]
+    },
+    {
+      "seed": 85,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "crossbowman",
+          "warrior_priest",
+          "pikeman",
+          "scout"
+        ],
+        [
+          "war_drummer",
+          "light_cavalry",
+          "bannerman",
+          "mercenary"
+        ]
+      ]
+    },
+    {
+      "seed": 86,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "pikeman",
+          "mercenary",
+          "saboteur",
+          "knight"
+        ],
+        [
+          "raider",
+          "sapper",
+          "skirmisher",
+          "infiltrator"
+        ]
+      ]
+    },
+    {
+      "seed": 87,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "pitch_thrower",
+          "ensign",
+          "marshall",
+          "mercenary"
+        ],
+        [
+          "royal_guard",
+          "vanguard",
+          "scout",
+          "pikeman"
+        ]
+      ]
+    },
+    {
+      "seed": 88,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "herald",
+          "royal_guard",
+          "crossbowman",
+          "warrior_priest"
+        ],
+        [
+          "footman",
+          "heavy_cavalry",
+          "war_drummer",
+          "siege_tower"
+        ]
+      ]
+    },
+    {
+      "seed": 89,
+      "steps": 768,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "pitch_thrower",
+          "ensign",
+          "warrior_priest",
+          "warlord"
+        ],
+        [
+          "herald",
+          "assassin",
+          "infiltrator",
+          "vanguard"
+        ]
+      ]
+    },
+    {
+      "seed": 90,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "berserker",
+          "mercenary",
+          "lancer",
+          "pitch_thrower"
+        ],
+        [
+          "war_drummer",
+          "war_wagon",
+          "saboteur",
+          "vanguard"
+        ]
+      ]
+    },
+    {
+      "seed": 91,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "archer",
+          "crossbowman",
+          "warlord",
+          "rearguard"
+        ],
+        [
+          "swordsman",
+          "earl",
+          "ensign",
+          "assassin"
+        ]
+      ]
+    },
+    {
+      "seed": 92,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "heavy_cavalry",
+          "pikeman",
+          "rearguard",
+          "herald"
+        ],
+        [
+          "warlord",
+          "skirmisher",
+          "infiltrator",
+          "war_wagon"
+        ]
+      ]
+    },
+    {
+      "seed": 93,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "ensign",
+          "bannerman",
+          "vanguard",
+          "pikeman"
+        ],
+        [
+          "pitch_thrower",
+          "sapper",
+          "lancer",
+          "rearguard"
+        ]
+      ]
+    },
+    {
+      "seed": 94,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "herald",
+          "siege_tower",
+          "crossbowman",
+          "cavalry"
+        ],
+        [
+          "raider",
+          "vanguard",
+          "archer",
+          "saboteur"
+        ]
+      ]
+    },
+    {
+      "seed": 95,
+      "steps": 649,
+      "status": "finished",
+      "winner": 0,
+      "armies": [
+        [
+          "rearguard",
+          "warlord",
+          "archer",
+          "royal_guard"
+        ],
+        [
+          "cavalry",
+          "mercenary",
+          "bannerman",
+          "warrior_priest"
+        ]
+      ]
+    },
+    {
+      "seed": 96,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "swordsman",
+          "saboteur",
+          "siege_tower",
+          "ensign"
+        ],
+        [
+          "royal_guard",
+          "raider",
+          "scout",
+          "light_cavalry"
+        ]
+      ]
+    },
+    {
+      "seed": 97,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "mercenary",
+          "assassin",
+          "bishop",
+          "war_wagon"
+        ],
+        [
+          "war_drummer",
+          "herald",
+          "bannerman",
+          "ensign"
+        ]
+      ]
+    },
+    {
+      "seed": 98,
+      "steps": 570,
+      "status": "finished",
+      "winner": 1,
+      "armies": [
+        [
+          "herald",
+          "siege_tower",
+          "trebuchet",
+          "war_drummer"
+        ],
+        [
+          "bannerman",
+          "warrior_priest",
+          "bishop",
+          "berserker"
+        ]
+      ]
+    },
+    {
+      "seed": 99,
+      "steps": 2000,
+      "status": "truncated",
+      "winner": null,
+      "armies": [
+        [
+          "bishop",
+          "archer",
+          "rearguard",
+          "raider"
+        ],
+        [
+          "war_drummer",
+          "mercenary",
+          "skirmisher",
+          "warrior_priest"
+        ]
+      ]
+    }
+  ],
+  "covered_units": [
+    "archer",
+    "assassin",
+    "bannerman",
+    "berserker",
+    "bishop",
+    "cavalry",
+    "crossbowman",
+    "earl",
+    "ensign",
+    "footman",
+    "heavy_cavalry",
+    "herald",
+    "infiltrator",
+    "knight",
+    "lancer",
+    "light_cavalry",
+    "marshall",
+    "mercenary",
+    "pikeman",
+    "pitch_thrower",
+    "raider",
+    "rearguard",
+    "royal_guard",
+    "saboteur",
+    "sapper",
+    "scout",
+    "siege_tower",
+    "skirmisher",
+    "swordsman",
+    "trebuchet",
+    "vanguard",
+    "war_drummer",
+    "war_wagon",
+    "warlord",
+    "warrior_priest"
+  ]
+}

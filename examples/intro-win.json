@@ -1,0 +1,7103 @@
+{
+  "format": 1,
+  "rules_version": "base-2",
+  "seed": 7,
+  "initial_digest": "4fa046069855629751d274b4d824399ed10a48385b3dc81bc375fd761da571ae",
+  "steps": [
+    {
+      "action": {
+        "kind": "recruit",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": "swordsman",
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "13b2210ba0f9a1dd626061c29416d94a966dda82dc2d39d34af6eddb604aa456",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "recruit"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              "swordsman"
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "18311ea8df92c15a63017741c0abbd143054d6bb442c70da5705b9be95b5c767",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "recruit",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": "swordsman",
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "51ab988500dd3dc933896f8f49845238193ee3aec3d922e5d351c28c34c7687f",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "recruit"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              "swordsman"
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "6864b0dc3213fc1ac9c23ead7a252b56ca1103bf9c6562e2d578c5228b125c60",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "recruit",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": "swordsman",
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "717fb99723074c90c664409f159598815de1965649637beff6c96754f8ed103e",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "recruit"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              "swordsman"
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "5c3ac49cc19155746ad0f9d78050a8ae7502618cea4873218db267369de48407",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              2
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "deploy",
+        "coin": "swordsman",
+        "path": [],
+        "target": [
+          -1,
+          -2
+        ],
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "ffc41a2b3c21db33ac0e15c5d831802135d1e466150836e2221096c7f65294c9",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "deploy"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              [
+                -1,
+                -2
+              ]
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "cfb270cb8259bcc5c2300b066ac0ea76a79700f8ad36b923e2257707781e6606",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "29b62a9f6b5c2866d4c654e1640faf8dcc0e8511c2f8ddd7e743f050f40fc863",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "0f85d2d0790ac894d8317aee64cf5fe52be12eea45482f99d2275f24d78d3e71",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "c28924725a419af76829e20522e79855030f2786eede3207f68714697b8947c7",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "e2cc2b936d3b26a1009754d79ded8212ce1ddd0cced4d35ff53b0e118c41bb90",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              3
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            -2,
+            -1
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "c672966ac309f39235422e992783ea92b10e7eaddc81cb4479983424b8b388ca",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  -2,
+                  -1
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -1,
+                -2
+              ]
+            ],
+            [
+              "end",
+              [
+                -2,
+                -1
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "a2c564171d0ffd4d6efaa62cc7f32adbcc8c029cd196d0b429acf91de87d7ab5",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "97af65200f5dc94b96b324c0441856cf95e5990a8d70a26cdbdea4b741757c8e",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "e0e6fb96a8b46758286578020e5978aed9d41e32b3186adac850d361a771a06d",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "856971c70d0c86e86a66d78af0a3b2a56f70145a73b77122df46722099cc7fb6",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "381c07cb5e8a740f5ddfb785741eb7a6aa675da08533f382e08be0d9d30d96d8",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              4
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "count",
+              11
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            -2,
+            0
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "b68d89eefe3834a14cc8b5e196f202b46479b1009db30fb3079aa88444fc3875",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  -2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -2,
+                -1
+              ]
+            ],
+            [
+              "end",
+              [
+                -2,
+                0
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "0dd6dd5869581466a73e9707c197f18e07a7628d1f21994e48da7340571fc2cf",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "control",
+        "coin": "swordsman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "82c3bfd32b044e59a53cb17d0bed6e24594c92e2178dcc1abeb2c20f9205e9a5",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "control"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "79212305479e7a41f5e5eb16972ff3b52d3934700b7cb2db8162a23360a707b3",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "d4765c18297dcae3716ce54512730c3a44687a81b1d6daf27041e8339b2baff6",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "86a4dd19e08a6c6f735ba96c6a1157f58550f56aa63c1bbbf2b9080887e98e1b",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              5
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "5f8a0565740bc40c175f4d09780983d2b8c5a5ce63c9e56dfb2df7222f555589",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "4b700d817afd61568f0067691d0a6473cbd55557d36746016cebc284c9fd9f95",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "27d55f2974130b8b627420289c30273dd8c426573a290dadde58523202a568c9",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "62bfd41018b72681a06a4c147de6c6f6a397d66aadaaf8c442b60ad3792f30c3",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "126bc80beea30262b0b009c0b126769b8a150f2bd6f6b73f42728651211d3611",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "b50be601435dbf2f43aa68771ceaddbd37f802f959558e0172ae081474cbe397",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              6
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            -3,
+            1
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "98893056f1575ff74f2b890095d14a14d5d9d8574a842c57b3aac6c51f809029",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  -3,
+                  1
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -2,
+                0
+              ]
+            ],
+            [
+              "end",
+              [
+                -3,
+                1
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "3d8f2f9dd53781f972ca97b39a65f69042832e1bf780672f7ee55336b88e6ae0",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "5d779930dfa8dbef92613f83e514c7a50da7c885bc2c9a0116b31c277d6b98c8",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "abd051060383f1be15b2b54487b4b74cad0f24caf9666574255cb87042707a83",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "8f3db52b946b321224966ef53d53139e8bf271e10d2c43efadc919d3315c2b49",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "b283a6060d2771b349666680700c52b88db329cba3f0487b7c30c4c9ff6a0a7b",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              7
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            -3,
+            2
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "e5812f79044b943a957970b9ee6b849a610c70c3bb86f935b4a2d6fb2ed0afbd",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  -3,
+                  2
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -3,
+                1
+              ]
+            ],
+            [
+              "end",
+              [
+                -3,
+                2
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "9b1ee9399ccd779160786e4a3e6441271d25eda1ab9a04bfe4001f6d072c04e8",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "86c7588e65a783dd047ad60c5617da137fbaa15628306fb444902bebbc28af58",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "6a43b200b7d3f476d1894ce7d1bc1530f8d83c954dc86136d9ae1d39dba95941",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "e218e0f2d801ebe16b12e38ec3f5ee3bbb53b8108b1fc9d1f2348fc185d76c7b",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "6bef49fec6ed2c8942eb0e55db0873f6b23ceb2fc13631603c5d0afe6dcf50b0",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              8
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "control",
+        "coin": "swordsman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "4b833de1e013db9ed45d91bb51b792b7291b826e623f705724bb4451e6100c0e",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "control"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "8dc67e6f488d4d73198aa300f7b1fb0b56ad154a44ae83033ac11f6fb3a98aa7",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "dbd39f2184aec57705fd915d4d55793c55eec9846672a8616e21d94e51e5306a",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "4fa44cc8c84d8904db338028ae4d0e08a95307119279e17d06ce1a4de60f87b3",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "44eba55a8763771516c3a9655cbdd7ac790d89188d9ca79a9e7817508c880a2d",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "0682bf4d01b1a2150fed7c515972593e866c0bfef30a8a1b2ef675dafc49ab3f",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              9
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            -2,
+            2
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "e829eb86ef130ee50146d6ee70273a92ff939768301e30757f3513f73616bf9e",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  -2,
+                  2
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -3,
+                2
+              ]
+            ],
+            [
+              "end",
+              [
+                -2,
+                2
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "3daeef9fc4e92e808a9af4a880bac34028f2041bf8aaf85ac661cfde6ecc2343",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            -1,
+            1
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "dc3d09a5054a84ad528c548faf3b4b82fe8eecf60e52fe3772a6415d9e657ccd",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  -1,
+                  1
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -2,
+                2
+              ]
+            ],
+            [
+              "end",
+              [
+                -1,
+                1
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "ec33d680445bfb85d333d01861079f60ade8409c9da77dbe456cf73552faaad9",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "bb47a40734f09614f584c58b7a0bc13ffc95bbb3a9e53c0c61fbf84730cdb6cd",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "1fcfa5dc27581b9ba6d5cd597bbefcc8263c3a02e4c0919886518f482ccacce0",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              10
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "control",
+        "coin": "swordsman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "88483c560e72b225ab9f71844604eccb56c95873cdaca8aa800160c82add9d37",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "control"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "aaa7bf9571c527bab3d2ae925546f5846720f46064241959a77272a61fb8a682",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "ca75ee07dc877aec04b4982f96c608e4898dd5b2faf9a5a15d46d13a6106025a",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "f55b5b25f72ab3d1670b4adc0d7023e279512023225a02960357fe901de8fda0",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "6c2de3d13c5cc4ccd8cc9ff1bcbdd241d1c2d2bd9654c3aba549c46d1349e52b",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "scout",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "a425a2e8b1d03092636658bd8332d253d105acba16b5aaec2c8ca061e387504e",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              11
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            0,
+            0
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "427abd441c4dc936dc5e65a92d3719a7c4d6e04d647faa1538b4c261083fad6f",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  0,
+                  0
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                -1,
+                1
+              ]
+            ],
+            [
+              "end",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "8e24bf7307830ec0d0b2370021f24f75d052e0f0e8c4d09ab78a9cd52f1e8557",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "00a648a3bd41b066355e29f1686af3fc221578985e510fdabed5ac936f6ccada",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "11bd58bb30c53669f94d39d7323c4e878a43bd25cb558d5d4621fc479e6d2ea0",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "pikeman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "65cbd10b6ff45beaa0f9ae33b5c9b3523b7da9aff064971167e25cbca47f55e0",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "royal",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "b74eccc48e174703524e927896af2c38e0138a881cde95fb1284834bd09238e4",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              12
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "move",
+        "coin": "swordsman",
+        "path": [
+          [
+            1,
+            -1
+          ]
+        ],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "f6a7d805a006ff82f0d10f9c1b72a1f73cfa2223bc362212095662c2d005fde3",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "move"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              [
+                [
+                  1,
+                  -1
+                ]
+              ]
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "move",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "unit",
+              "swordsman"
+            ],
+            [
+              "start",
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              "end",
+              [
+                1,
+                -1
+              ]
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "archer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "37f3292d359e9e874cfd0830aeed36343e953ec2c2952a18f4bdb483332c158d",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "archer"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "crossbowman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "dadd72f2a2a5c2f457e8f0cb36ce11f56c4f84361da77f830b987d30730c17f1",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "crossbowman"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "63511032813744aa6d3254ec1c4e36bff9edb4e0f8d3b42ecfb1ab2f39059f38",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "cavalry"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "light_cavalry",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "fdeb4a66da6d24b16bd37db91b40c55e29149eb64c9502a42d48563b7206cf8d",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "light_cavalry"
+            ]
+          ],
+          "visible_to": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "pass",
+        "coin": "lancer",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "bf1287f53f1de5185963de7586d6bbc20ddacba42be70797f7189fb4f5fafffe",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "kind",
+              "pass"
+            ],
+            [
+              "coin",
+              null
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "payment",
+          "data": [
+            [
+              "coin",
+              "lancer"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "round",
+          "data": [
+            [
+              "round",
+              13
+            ],
+            [
+              "initiative",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "swordsman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "pikeman"
+            ]
+          ],
+          "visible_to": 0
+        },
+        {
+          "kind": "reshuffle",
+          "data": [
+            [
+              "player",
+              1
+            ],
+            [
+              "count",
+              9
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "royal"
+            ]
+          ],
+          "visible_to": 1
+        },
+        {
+          "kind": "draw",
+          "data": [
+            [
+              "player",
+              1
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "draw_coin",
+          "data": [
+            [
+              "coin",
+              "scout"
+            ]
+          ],
+          "visible_to": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "control",
+        "coin": "swordsman",
+        "path": [],
+        "target": null,
+        "recruit": null,
+        "after": null,
+        "source": null,
+        "effect": null
+      },
+      "digest": "3dba270a95f0a1775cbfdfe8457e05b1698261263ca2066bc2e758f2a8cd3847",
+      "events": [
+        {
+          "kind": "action",
+          "data": [
+            [
+              "player",
+              0
+            ],
+            [
+              "kind",
+              "control"
+            ],
+            [
+              "coin",
+              "swordsman"
+            ],
+            [
+              "path",
+              []
+            ],
+            [
+              "target",
+              null
+            ],
+            [
+              "recruit",
+              null
+            ],
+            [
+              "after",
+              null
+            ],
+            [
+              "source",
+              null
+            ],
+            [
+              "effect",
+              null
+            ],
+            [
+              "free",
+              false
+            ]
+          ],
+          "visible_to": null
+        },
+        {
+          "kind": "win",
+          "data": [
+            [
+              "player",
+              0
+            ]
+          ],
+          "visible_to": null
+        }
+      ]
+    }
+  ],
+  "status": "finished",
+  "winner": 0
+}

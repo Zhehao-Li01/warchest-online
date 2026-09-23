@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+save.json
+data/
+node_modules/
+test-results/
+playwright-report/
+
+# Local credentials, tools, databases, and training output
+.env
+.env.*
+!.env.example
+.tools/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.log
+checkpoints/
+runs/
+wandb/
+.DS_Store
