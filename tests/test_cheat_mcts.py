@@ -27,7 +27,7 @@ def test_current_hands_known_but_order_seed_stream_ignored():
     results = []
     for s in (state, other):
         stats = {}
-        action = choose_cheat_mcts_action(s, actions, random.Random(2),
+        action = choose_cheat_mcts_action(s, actions, random.Random(2), 
                                          simulations=3, max_rollout_steps=12, stats=stats)
         results.append((action, stats['actions']))
     assert results[0] == results[1]
@@ -122,7 +122,7 @@ def test_immediate_win_terminal_rewards_and_final_visits():
     validate_state(s)
     choices = [next(a for a in legal_actions(s) if a.kind == 'control'), Action('pass', 'footman')]
     stats = {}
-    action = choose_cheat_mcts_action(s, choices, random.Random(2),
+    action = choose_cheat_mcts_action(s, choices, random.Random(2), 
                                      simulations=20, max_rollout_steps=1, stats=stats)
     assert action == choices[0]
     assert stats['completed'] > 0

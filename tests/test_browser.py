@@ -691,6 +691,50 @@ def test_wagon_selects_ally_before_destination(live, browser):
     page.close()
 
 
+@pytest.mark.parametrize('width', [1440, 390])
+def test_removed_coins_details_both_sides_live_update(live, browser, width):
+    from playwright.sync_api import expect
+    from warchest import new_game, serialize, deserialize, validate_state
+    app, url = live
+    client = app.test_client()
+    seat = client.post('/api/rooms', json={'name':'明细测试','mode':'intro'}).get_json()
+    client.post(f"/api/rooms/{seat['code']}/join", json={'name':'对手'})
+    state = new_game(2)
+    state.players[0].supply['swordsman'] -= 2
+    state.players[0].removed.extend(['swordsman'] * 2)
+    state.players[0].supply['pikeman'] -= 1
+    state.players[0].removed.append('pikeman')
+    validate_state(state)
+    with app.extensions['rooms'].room(seat['code']) as room:
+        room['state'] = serialize(state)
+    page = browser.new_page(viewport={'width':width,'height':900})
+    page.add_init_script(f"sessionStorage.setItem('wc.session', {json.dumps(json.dumps(seat))});")
+    page.goto(url)
+    page.locator('#self-zone [data-removed-player]').click()
+    expect(page.locator('#removed-heading')).to_have_text('己方 · 已移除币')
+    expect(page.locator('[data-removed-unit="swordsman"] strong')).to_have_text('× 2')
+    expect(page.locator('[data-removed-unit="pikeman"] strong')).to_have_text('× 1')
+    expect(page.locator('.removed-list li')).to_have_count(2)
+    # A reinforcement returns a coin to supply: the open view must not stay stale.
+    with app.extensions['rooms'].room(seat['code']) as room:
+        state = deserialize(room['state'])
+        state.players[0].removed.remove('swordsman')
+        state.players[0].supply['swordsman'] += 1
+        validate_state(state)
+        room['state'] = serialize(state)
+        room['revision'] += 1
+    expect(page.locator('[data-removed-unit="swordsman"] strong')).to_have_text('× 1')
+    page.keyboard.press('Escape')
+    expect(page.locator('#removed-dialog')).not_to_be_visible()
+    page.locator('#opponent-zone [data-removed-player]').click()
+    expect(page.locator('#removed-heading')).to_have_text('对手 · 已移除币')
+    expect(page.locator('.removed-empty')).to_have_text('该方尚无已移除的币。')
+    page.locator('[data-close="removed-dialog"]').click()
+    expect(page.locator('#removed-dialog')).not_to_be_visible()
+    assert page.evaluate('document.documentElement.scrollWidth') <= width
+    page.close()
+
+
 def community_page(live, browser, state, width=1440):
     from warchest import serialize
     app, url = live

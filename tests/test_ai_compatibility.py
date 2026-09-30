@@ -100,3 +100,5 @@ def test_stale_decision_discarded(tmp_path, monkeypatch, change):
     monkeypatch.setattr('warchest.web.choose_action', searching)
     result = rooms.get(seat['code'], seat['token'])
     assert result['revision'] == (1 if change == 'revision' else 0)
+
+
