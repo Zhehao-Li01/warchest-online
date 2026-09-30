@@ -2,6 +2,7 @@
 from collections import Counter
 from copy import deepcopy
 from dataclasses import asdict, replace
+from functools import lru_cache
 import json
 import random
 
@@ -74,6 +75,7 @@ def new_game(seed=0, armies=None, initiative=0, *, expansions=None, setup=None):
     return state
 
 
+@lru_cache(maxsize=32768)
 def action_key(action):
     return json.dumps(asdict(action), sort_keys=True, separators=(",", ":"))
 
@@ -135,7 +137,7 @@ def pending_actions(state):
             actions = []
         else:
             # Removing the payment may make a Knight immune to the next attack.
-            preview = deepcopy(state, {id(state.history): state.history})
+            preview = deepcopy(state, {id(state.history): state.history, id(state.rng_state): state.rng_state})
             preview.board[pos].count -= 1
             actions = maneuvers(preview, pos, tactics=False, explicit=True)
     if kind in ("berserk", "mercenary") or not actions:
@@ -232,7 +234,8 @@ def apply_action(state, action):
         return expanded_apply(state, action)
     if not isinstance(action, Action) or action not in legal_actions(state):
         raise IllegalAction("行动不合法，状态未改变")
-    result = deepcopy(state, {id(state.history): state.history})
+    # History and PRNG state contain only immutable values; share those tuples.
+    result = deepcopy(state, {id(state.history): state.history, id(state.rng_state): state.rng_state})
     events = []
     who = result.current
     player = result.players[who]
@@ -309,7 +312,7 @@ def apply_action(state, action):
             followups.append(_task(result, "sword", owner, unit, pos))
         if unit == "berserker" and pos in result.board and result.board[pos].count > 1:
             followups.append(_task(result, "berserk", owner, unit, pos))
-        if unit == "warrior_priest" and (is_attack or is_control) and result.winner is None:
+        if unit == "warrior_priest" and pos in result.board and (is_attack or is_control) and result.winner is None:
             # Draw after any defender decision, so the defense player cannot see it.
             followups.append(_task(result, "draw", owner, unit))
     result.pending = followups + result.pending
@@ -361,6 +364,7 @@ def observe(state, player, *, include_history=True):
             "board": [{"pos": pos, **asdict(s)} for pos, s in sorted(state.board.items())],
             "controls": [{"pos": p, "owner": o} for p, o in sorted(state.controls.items())],
             "players": players,
+            "turn_owner": state.turn_owner,
             "pending": [{k: deepcopy(v) for k, v in t.items() if k != "coin" or t["player"] == player}
                         for t in state.pending],
             "history": visible_events(state.history, player) if include_history else []}
@@ -375,21 +379,23 @@ def validate_state(state):
     def require(condition, message):
         if not condition:
             raise ValueError(message)
-    require(state.version in (RULES_VERSION, "expansions-1"), "unsupported rules version")
-    require(bool(state.extras) == (state.version == "expansions-1"), "missing or unexpected expansion state")
+    require(state.version in (RULES_VERSION, "expansions-1", "expansions-2"), "unsupported rules version")
+    require(bool(state.extras) == (state.version in ("expansions-1", "expansions-2")), "missing or unexpected expansion state")
     require(len(state.players) == 2 and state.current in (0, 1)
             and state.initiative in (0, 1), "invalid players")
     require(set(state.controls) == LOCATIONS, "invalid control locations")
     require(all(o in (None, 0, 1) for o in state.controls.values()), "invalid control owner")
-    require(set(state.board) <= HEXES, "unit outside board")
+    from .community import board_hexes, stacks, captured, victory_target
+    deployed = [st for _, st in stacks(state)]
+    require(set(state.board) <= board_hexes(state), "unit outside board")
     seen = set()
-    for stack in state.board.values():
+    for stack in deployed:
         require(stack.owner in (0, 1), "invalid unit owner")
         require(stack.unit in state.players[stack.owner].supply and type(stack.count) is int and stack.count > 0,
                 "invalid unit stack")
         identity = (stack.owner, stack.unit)
         limit = 2 if stack.unit == "footman" else 1
-        require(sum(s.owner == stack.owner and s.unit == stack.unit for s in state.board.values()) <= limit,
+        require(sum(s.owner == stack.owner and s.unit == stack.unit for s in deployed) <= limit,
                 "duplicate deployed unit")
         seen.add(identity)
     all_units = [u for p in state.players for u in p.supply]
@@ -401,15 +407,18 @@ def validate_state(state):
         counts = Counter(c for c in p.bag + p.hand + p.removed + [c for c, _ in p.discard]
                          if not (state.extras and c.startswith("decoy_")))
         counts.update(p.supply)
-        for s in state.board.values():
+        for s in deployed:
+            trophies = captured(state, s.unit)
             if s.owner == who:
-                counts[s.unit] += s.count
+                counts[s.unit] += s.count - len(trophies)
+            for owner, unit in trophies:
+                if owner == who: counts[unit] += 1
         expected = Counter({u: UNITS[u].coins for u in p.supply})
         expected[ROYAL] = 1
         require(counts == expected, "coin conservation failed")
         require(ROYAL not in p.removed, "royal coin cannot be destroyed")
         require(list(state.controls.values()).count(who) <= 6, "control marker conservation failed")
-    winners = [p for p in (0, 1) if list(state.controls.values()).count(p) == 6]
+    winners = [p for p in (0, 1) if list(state.controls.values()).count(p) >= victory_target(state, p)]
     require((state.winner is None and not winners) or winners == [state.winner], "invalid winner")
     require(state.round >= 1, "invalid round")
     if state.pending:

@@ -1,4 +1,4 @@
-"""Official expansion rules. Choices are explicit, serializable continuations.
+"""Expansion rules. Choices are explicit, serializable continuations.
 
 The base-2 resolver remains available for existing games and recordings. Expanded
 matches use this resolver, with the same Action / State / observation boundary.
@@ -8,7 +8,8 @@ from copy import deepcopy
 from dataclasses import replace
 import random
 
-from .board import HEXES, LOCATIONS, DIRECTIONS, add, neighbors, distance
+from .board import HEXES, LOCATIONS, DIRECTIONS, SEA_HEXES, add, all_neighbors as neighbors, distance
+from . import community as co
 from .model import Action, Stack
 from .units import UNITS, EXPANSIONS, unit_family
 
@@ -64,6 +65,9 @@ def initialize(state, expansions=None, setup=None):
                     'poison': {}, 'decoys': {u: True for p in state.players for u in p.supply
                                             if u in ('infiltrator', 'skirmisher')},
                     'decrees': list(decrees), 'seals': [[], []]}
+    if enabled & {'champions', 'mastery', 'high_seas'}:
+        state.version = 'expansions-2'
+        state.extras.update(lost_markers=[0, 0], underlays={}, captured={}, copies={}, poison_units={})
 
 
 def forts(s):
@@ -71,7 +75,8 @@ def forts(s):
 
 
 def poisoned(s, pos):
-    return list(pos) in s.extras['poison'].values()
+    return any(p == list(pos) and s.extras.get('poison_units', {}).get(u, s.board[pos].unit) == s.board[pos].unit
+               for u, p in s.extras['poison'].items())
 
 
 def positions(s, who, unit=None):
@@ -89,7 +94,7 @@ def event(events, event_type, **data):
 
 
 def can_enter(s, pos, who, empty_origin=None):
-    return (pos in HEXES and (pos not in s.board or pos == empty_origin)
+    return (pos in co.board_hexes(s) and (pos not in s.board or pos == empty_origin or co.can_share(s, empty_origin, pos))
             and not (pos in forts(s) and s.controls[pos] == 1-who))
 
 
@@ -103,6 +108,8 @@ def paths(s, pos, length, straight=False, shock_end=False):
             end = add(start, d)
             last = len(path) + 1 == length
             normal = can_enter(s, end, owner, pos)
+            if end in SEA_HEXES and not co.has_attribute(s, pos, 'pirate'): normal = False
+            if end in s.board and end != pos and not last: normal = False
             shock = (shock_end and last and end in s.board and s.board[end].owner != owner and end not in forts(s))
             if not (normal or shock):
                 continue
@@ -116,14 +123,17 @@ def paths(s, pos, length, straight=False, shock_end=False):
 
 def attackable(s, source, target, *, normal=True):
     st = s.board[source]
-    if normal and st.unit in ('archer', 'lancer', 'trebuchet'):
+    if normal and co.role(s, source) in ('archer', 'lancer', 'trebuchet', 'corsair'):
         return False
     if target in forts(s):
-        return s.controls[target] != st.owner
+        # A hostile garrison is protected even if its location is controlled by us.
+        # Neutral, empty fortifications are also valid attack targets.
+        victim = s.board.get(target)
+        return s.controls[target] != st.owner or (victim is not None and victim.owner != st.owner)
     victim = s.board.get(target)
     return (victim is not None and victim.owner != st.owner
-            and (victim.unit != 'knight' or st.count > 1)
-            and (victim.unit != 'bishop' or st.count == 1))
+            and (not co.has_attribute(s, target, 'knight') or st.count > 1)
+            and (not co.has_attribute(s, target, 'bishop') or st.count == 1))
 
 
 def attack_action(s, pos, target, kind='attack', path=(), **kw):
@@ -133,38 +143,41 @@ def attack_action(s, pos, target, kind='attack', path=(), **kw):
 
 def maneuvers(s, pos, tactics=True, chain=True):
     st = s.board[pos]
-    unit, who = st.unit, st.owner
-    actions = [Action('move', unit, path=p, source=pos) for p in paths(s, pos, 1)]
+    unit, who = co.role(s, pos), st.owner
+    copy = s.extras.get('copies', {}).get(st.unit)
+    tactics = tactics and (not copy or copy['tactics'])
+    actions = [Action('move', st.unit, path=p, source=pos) for p in paths(s, pos, 1)]
     actions += [attack_action(s, pos, p) for p in neighbors(pos) if attackable(s, pos, p)]
     if pos in s.controls and s.controls[pos] != who:
-        actions.append(Action('control', unit, source=pos))
+        actions.append(Action('control', st.unit, source=pos))
+    actions += co.extra_maneuvers(s, pos, tactics, chain)
     if not tactics:
         return actions
     for n in (2, 3):
-        if (unit == 'archer' and n == 2) or (unit == 'crossbowman' and n == 2) or (unit == 'trebuchet' and st.count > 1):
-            for target in sorted(HEXES):
+        if (unit in ('archer', 'marksman') and n == 2) or (unit == 'crossbowman' and n == 2) or (unit == 'trebuchet' and st.count > 1) or (unit == 'pirate' and pos in SEA_HEXES and n == 2):
+            for target in sorted(co.board_hexes(s)):
                 if distance(pos, target) != n or not attackable(s, pos, target, normal=False):
                     continue
-                if unit != 'archer':
+                if unit not in ('archer', 'marksman'):
                     directions = [d for d in DIRECTIONS if (pos[0]+n*d[0], pos[1]+n*d[1]) == target]
                     if not directions:
                         continue
-                    if unit == 'crossbowman' and add(pos, directions[0]) in s.board:
+                    if unit in ('crossbowman', 'pirate') and add(pos, directions[0]) in s.board:
                         continue
                 actions.append(attack_action(s, pos, target, 'tactic'))
-    if unit in ('light_cavalry', 'skirmisher', 'heavy_cavalry'):
+    if unit in ('light_cavalry', 'skirmisher', 'heavy_cavalry', 'dragoon'):
         for path in [p for n in ((1, 2) if unit == 'skirmisher' else (2,))
                      for p in paths(s, pos, n, straight=unit == 'heavy_cavalry', shock_end=unit == 'heavy_cavalry')]:
             if unit == 'skirmisher' and not any(q in s.board and s.board[q].owner != who for q in neighbors(path[-1])):
                 continue
             actions.append(Action('tactic', unit, path=path, source=pos,
                                   effect='charge_shock' if unit == 'heavy_cavalry' else 'move'))
-    if unit in ('cavalry', 'lancer', 'sapper', 'assassin'):
-        for n in ((1, 2) if unit == 'lancer' else (1,)):
-            for path in paths(s, pos, n, straight=unit == 'lancer'):
+    if unit in ('cavalry', 'lancer', 'sapper', 'assassin', 'dragoon', 'ranger'):
+        for n in ((1, 2) if unit in ('lancer', 'dragoon') else (1,)):
+            for path in paths(s, pos, n, straight=unit in ('lancer', 'dragoon')):
                 end = path[-1]
                 for target in neighbors(end):
-                    if unit == 'lancer' and target != (end[0]+(path[0][0]-pos[0]), end[1]+(path[0][1]-pos[1])):
+                    if unit in ('lancer', 'dragoon') and target != (end[0]+(path[0][0]-pos[0]), end[1]+(path[0][1]-pos[1])):
                         continue
                     if unit == 'assassin':
                         if target in s.board and s.board[target].owner != who:
@@ -204,7 +217,7 @@ def maneuvers(s, pos, tactics=True, chain=True):
     if unit == 'herald':
         for ally in neighbors(pos):
             other = s.board.get(ally)
-            if other and other.owner == who and other.count == 1 and s.players[who].supply[other.unit]:
+            if other and co.can_bolster(s, ally) and other.owner == who and other.count == 1 and s.players[who].supply[other.unit]:
                 actions.append(Action('tactic', unit, source=pos, target=ally, effect='supply_bolster'))
     if unit == 'siege_tower' and st.count > 1:
         actions += [replace(a, kind='tactic', effect='double_' + a.effect) for a in maneuvers(s, pos, False) if a.kind == 'attack']
@@ -222,14 +235,20 @@ def maneuvers(s, pos, tactics=True, chain=True):
                 actions.append(Action('tactic', unit, source=pos, target=target, effect='poison'))
             elif st.count > 1 and target not in forts(s) and dist == (2 if unit == 'pitch_thrower' else 1):
                 actions.append(Action('tactic', unit, source=pos, target=target, effect='shock'))
-    return actions
+    # Copied tactics still consume and identify the physical Apprentice coin.
+    return [replace(a, coin=st.unit) if a.coin == unit else a for a in actions]
 
 
 def placements(s, who, unit, origin=None):
     result = {p for p, owner in s.controls.items() if owner == who}
     if unit == 'scout':
         result.update(q for p in positions(s, who) if p != origin for q in neighbors(p))
-    return sorted(p for p in result if can_enter(s, p, who, origin))
+    if unit != 'longboat':
+        result.update(p for p, st in s.board.items() if st.owner == who and co.is_ship(s, p)
+                      and co.key(p) not in s.extras.get('underlays', {}))
+    return sorted(p for p in result if (can_enter(s, p, who, origin) or
+                  (unit != 'longboat' and p in s.board and co.is_ship(s, p)
+                   and co.key(p) not in s.extras.get('underlays', {}))))
 
 
 def decree_options(s, who, free=False):
@@ -266,6 +285,14 @@ def decree_actions(s, who, decree):
 
 def legal_actions(s):
     from .engine import action_key
+    actions = {co.tagged(v, a) for v in co.variants(s) for a in _legal_actions(v)}
+    if s.pending and not s.pending[0].get('optional') and any(a.kind != 'finish' for a in actions):
+        actions = {a for a in actions if a.kind != 'finish'}
+    return sorted(actions, key=action_key)
+
+
+def _legal_actions(s):
+    from .engine import action_key
     if s.winner is not None:
         return []
     if s.pending and s.pending[0]['type'] != 'coin':
@@ -288,15 +315,20 @@ def legal_actions(s):
                 for n in (1, 2):
                     actions.extend(Action('tactic', coin, source=pos, path=p, effect='move')
                                    for p in paths(s, pos, n) if s.controls.get(p[-1]) == who)
+            for pos in positions(s, who, 'apprentice'):
+                for path in paths(s, pos, 1):
+                    if any(p != pos and distance(p, path[-1]) == 1 for p in positions(s, who)):
+                        actions.append(Action('tactic', coin, source=pos, path=path, effect='move'))
             continue
         deployed = positions(s, who, coin)
-        if len(deployed) < (2 if coin == 'footman' else 1):
+        all_deployed = [p for p, st in co.stacks(s) if st.owner == who and st.unit == coin]
+        if len(all_deployed) < (2 if coin == 'footman' else 1):
             actions += [Action('deploy', coin, target=p) for p in placements(s, who, coin)]
         if any(poisoned(s, p) for p in deployed):
             actions.append(Action('cure', coin))
         for pos in deployed:
             if not poisoned(s, pos):
-                actions.append(Action('bolster', coin, source=pos))
+                if co.can_bolster(s, pos): actions.append(Action('bolster', coin, source=pos))
                 actions.extend(maneuvers(s, pos))
     return sorted(set(actions), key=action_key)
 
@@ -320,9 +352,9 @@ def pending_actions(s, t):
         if kind == 'saboteur': actions = [a for a in actions if a.effect == 'poison']
     elif kind == 'defend':
         actions = [Action('defend_unit', unit, source=pos)]
-        if unit == 'royal_guard' and s.players[who].supply[unit]:
+        if co.has_attribute(s, pos, 'royal_guard') and s.players[who].supply[unit]:
             actions.append(Action('defend_supply', unit, source=pos))
-        if unit == 'skirmisher' and s.extras['decoys'].get(unit):
+        if co.has_attribute(s, pos, 'skirmisher') and s.extras['decoys'].get('skirmisher'):
             actions.append(Action('defend_decoy', unit, source=pos))
         for p in neighbors(pos):
             if p in s.board and s.board[p].owner == who and s.board[p].unit == 'war_wagon':
@@ -334,11 +366,11 @@ def pending_actions(s, t):
                     actions.append(Action('displace', unit, source=target, path=path))
     elif kind == 'build' and attached and pos in s.controls and pos not in forts(s) and len(forts(s)) < 7:
         actions = [Action('build', unit, source=pos)]
-    elif kind == 'bolster' and attached and s.players[who].supply[unit]:
+    elif kind == 'bolster' and attached and co.can_bolster(s, pos) and s.players[who].supply[unit]:
         actions = [Action('supply_bolster', unit, source=pos, target=pos)]
     elif kind == 'recruit_bolster' and attached and (unit, True) in s.players[who].discard:
         actions = [Action('recruit_bolster', unit, source=pos, target=pos)]
-    elif kind == 'deceive' and s.extras['decoys'].get(unit):
+    elif kind == 'deceive' and s.extras['decoys'].get('infiltrator' if unit == 'apprentice' else unit):
         actions = [Action('deceive', unit)]
     elif kind == 'cull' and s.players[1-who].supply.get(t['victim'], 0):
         actions = [Action('cull', unit, recruit=t['victim'])]
@@ -355,6 +387,7 @@ def pending_actions(s, t):
         actions = [Action('spy_discard', unit, recruit=u) for u in set(s.players[1-who].hand)]
     elif kind == 'order':
         actions = [Action('resolve', unit, effect=str(i)) for i in range(len(t['groups']))]
+    actions += co.pending_actions(s, t)
     if t.get('optional') or not actions:
         actions.append(Action('finish', unit))
     return actions
@@ -369,41 +402,81 @@ def ordered(groups, who):
     return [task('order', who, groups=groups)]
 
 
+def relocate_tasks(tasks, start, end, units):
+    for t in tasks:
+        if tuple(t.get('source') or ()) == start and t.get('unit') in units:
+            t['source'] = list(end)
+        for group in t.get('groups', []): relocate_tasks(group, start, end, units)
+
+
 def move(s, start, end, events):
+    if start == end: return
+    ship = co.is_ship(s, start)
+    if ship:
+        transports = s.extras.setdefault('transports', [])
+        if s.board[start].unit not in transports: transports.append(s.board[start].unit)
     st = s.board.pop(start)
+    carried = co.underlays(s).pop(co.key(start), None)
+    moving = [st.unit]
+    if carried and ship:
+        co.underlays(s)[co.key(end)] = carried
+        moving.append(carried['unit'])
+    elif carried:
+        s.board[start] = Stack(**carried)
+    if end in s.board:
+        other = s.board.pop(end)
+        co.underlays(s)[co.key(end)] = dict(owner=other.owner, unit=other.unit, count=other.count)
     s.board[end] = st
-    for unit, p in s.extras['poison'].items():
-        if p == list(start): s.extras['poison'][unit] = list(end)
-    # Continuations remain attached to the same unit when another effect moves it.
-    def relocate(tasks):
-        for t in tasks:
-            if tuple(t.get('source') or ()) == start and t.get('unit') == st.unit:
-                t['source'] = list(end)
-            for group in t.get('groups', []): relocate(group)
-    relocate(s.pending)
+    for poisoner, p in s.extras['poison'].items():
+        target = s.extras.get('poison_units', {}).get(poisoner, st.unit)
+        if p == list(start) and target in moving: s.extras['poison'][poisoner] = list(end)
+    relocate_tasks(s.pending, start, end, moving)
     event(events, 'move', player=st.owner, unit=st.unit, start=start, end=end)
+    if carried and ship:
+        event(events, 'transport', player=st.owner, unit=carried['unit'], start=start, end=end)
 
 
 def remove_unit(s, pos):
-    del s.board[pos]
-    s.extras['poison'] = {u: p for u, p in s.extras['poison'].items() if p != list(pos)}
+    st = s.board.pop(pos)
+    other = co.underlays(s).pop(co.key(pos), None)
+    if other: s.board[pos] = Stack(**other)
+    s.extras['poison'] = {u: p for u, p in s.extras['poison'].items()
+                          if p != list(pos) or s.extras.get('poison_units', {}).get(u, st.unit) != st.unit}
+    return st
 
 
 def damage(s, pos, events):
     if pos not in s.board:
         return
     st = s.board[pos]
+    trophy = co.captured(s, st.unit)
     st.count -= 1
-    s.players[st.owner].removed.append(st.unit)
+    if trophy:
+        owner, unit = trophy.pop(0)
+        s.players[owner].removed.append(unit)
+    else:
+        s.players[st.owner].removed.append(st.unit)
     event(events, 'damage', player=st.owner, unit=st.unit, pos=pos, remaining=st.count)
-    if not st.count: remove_unit(s, pos)
+    if not st.count:
+        champion = any(co.has_attribute(s, pos, u) for u in co.CHAMPIONS)
+        remove_unit(s, pos)
+        if champion:
+            lost = s.extras.setdefault('lost_markers', [0, 0])
+            lost[1-st.owner] += 1
+            event(events, 'champion_destroyed', player=st.owner, unit=st.unit,
+                  beneficiary=1-st.owner, target=co.victory_target(s, 1-st.owner))
+            co.check_victory(s, events)
 
 
 def shock(s, pos, events):
     if pos not in s.board:
         return
     st = s.board[pos]
-    s.players[st.owner].discard.extend((st.unit, True) for _ in range(st.count))
+    trophy = co.captured(s, st.unit)
+    for owner, unit in trophy:
+        s.players[owner].discard.append((unit, True))
+    s.players[st.owner].discard.extend((st.unit, True) for _ in range(st.count-len(trophy)))
+    trophy.clear()
     event(events, 'shock', player=st.owner, unit=st.unit, pos=pos, count=st.count)
     remove_unit(s, pos)
 
@@ -411,15 +484,25 @@ def shock(s, pos, events):
 def unbolster(s, pos, events):
     st = s.board[pos]
     st.count -= 1
-    s.players[st.owner].discard.append((st.unit, True))
+    trophy = co.captured(s, st.unit)
+    if trophy:
+        owner, unit = trophy.pop(0)
+        s.players[owner].discard.append((unit, True))
+    else:
+        s.players[st.owner].discard.append((st.unit, True))
     event(events, 'unbolster', player=st.owner, unit=st.unit, pos=pos)
 
 
 def move_hooks(s, pos):
     st = s.board[pos]
-    if st.unit == 'sapper' and pos in s.controls and pos not in forts(s) and len(forts(s)) < 7:
+    if co.is_ship(s, pos) and co.key(pos) in s.extras.get('underlays', {}):
+        passenger = s.extras['underlays'][co.key(pos)]['unit']
+        preview = deepcopy(s, {id(s.history): s.history})
+        co.expose(preview, pos, passenger)
+        return ordered([move_hooks(preview, pos), maneuver_hooks(preview, pos)], st.owner)
+    if co.has_attribute(s, pos, 'sapper') and pos in s.controls and pos not in forts(s) and len(forts(s)) < 7:
         return [task('build', st.owner, st.unit, pos, optional=True)]
-    if st.unit == 'war_drummer':
+    if co.has_attribute(s, pos, 'war_drummer'):
         return [task('drum', st.owner, st.unit, pos, optional=True)]
     return []
 
@@ -428,9 +511,9 @@ def maneuver_hooks(s, pos):
     if pos not in s.board:
         return []
     st = s.board[pos]
-    if st.unit == 'bannerman':
+    if co.has_attribute(s, pos, 'bannerman'):
         return [task('bannerman', st.owner, st.unit, pos, optional=True)]
-    if st.unit == 'berserker' and st.count > 1:
+    if co.has_attribute(s, pos, 'berserker') and st.count > 1:
         return [task('berserk', st.owner, st.unit, pos, optional=True)]
     return []
 
@@ -439,26 +522,27 @@ def control(s, pos, events):
     st = s.board[pos]
     s.controls[pos] = st.owner
     event(events, 'control', player=st.owner, unit=st.unit, pos=pos)
-    if list(s.controls.values()).count(st.owner) == 6:
-        s.winner = st.owner
-        event(events, 'win', player=st.owner)
-    if st.unit == 'infiltrator' and s.extras['decoys'].get(st.unit):
-        return [task('deceive', st.owner, st.unit, pos, optional=True)]
-    if st.unit == 'warrior_priest':
-        return [task('draw', st.owner, st.unit, pos)]
-    return []
+    co.check_victory(s, events)
+    hooks = []
+    if co.has_attribute(s, pos, 'infiltrator') and s.extras['decoys'].get('infiltrator'):
+        hooks.append(task('deceive', st.owner, st.unit, pos, optional=True))
+    if co.has_attribute(s, pos, 'warrior_priest'):
+        hooks.append(task('draw', st.owner, st.unit, pos))
+    if any(other.owner != st.owner and (other.unit == 'admiral' or s.extras.get('copies', {}).get(other.unit, {}).get('unit') == 'admiral') for _, other in co.stacks(s)):
+        hooks.append(task('admirals', st.owner))
+    return hooks
 
 
 def bolster(s, pos, events):
     st = s.board[pos]
     st.count += 1
     event(events, 'bolster', player=st.owner, unit=st.unit, pos=pos)
-    return [task('move', st.owner, st.unit, pos, optional=True)] if st.unit == 'raider' else []
+    return [task('move', st.owner, st.unit, pos, optional=True)] if co.has_attribute(s, pos, 'raider') else []
 
 
 def deploy_hooks(s, pos):
     st = s.board[pos]
-    kind = {'earl': 'move', 'siege_tower': 'bolster', 'vanguard': 'maneuver'}.get(st.unit)
+    kind = next((v for u, v in {'earl': 'move', 'siege_tower': 'bolster', 'vanguard': 'maneuver'}.items() if co.has_attribute(s, pos, u)), None)
     return [task(kind, st.owner, st.unit, pos, optional=True)] if kind else []
 
 
@@ -481,14 +565,15 @@ def attack(s, pos, target, events, sacrifice=False):
     st = s.board[pos]
     event(events, 'attack', player=st.owner, unit=st.unit, source=pos, target=target)
     after = task('after_attack', st.owner, st.unit, pos, sacrifice=sacrifice,
-                 victim=None, victim_owner=1-st.owner, poisoned=False, retaliates=False)
+                 victim=None, victim_owner=1-st.owner, poisoned=False, retaliates=False,
+                 **({'before_removed':list(s.players[1-st.owner].removed)} if 'mastery' in s.extras['enabled'] else {}))
     if target in forts(s):
         s.extras['forts'].remove(list(target))
         event(events, 'fort_destroyed', player=st.owner, pos=target)
         return [after]
     victim = s.board[target]
     after.update(victim=victim.unit, victim_owner=victim.owner, poisoned=poisoned(s, target),
-                 retaliates=victim.unit == 'pikeman' and distance(pos, target) == 1)
+                 retaliates=co.has_attribute(s, target, 'pikeman') and distance(pos, target) == 1)
     defend = task('defend', victim.owner, victim.unit, target)
     if len(pending_actions(s, defend)) > 1:
         return [defend, after]
@@ -498,15 +583,19 @@ def attack(s, pos, target, events, sacrifice=False):
 
 def after_attack(s, t, events):
     pos = tuple(t['source'])
+    co.expose(s, pos, t['unit'])
     who, unit = t['player'], t['unit']
-    if t['retaliates']: damage(s, pos, events)
-    if t['sacrifice']: damage(s, pos, events)
+    if t['retaliates'] and pos in s.board and s.board[pos].unit == unit: damage(s, pos, events)
+    if t['sacrifice'] and pos in s.board and s.board[pos].unit == unit: damage(s, pos, events)
     groups = []
-    if unit == 'assassin' and t['poisoned'] and s.players[t['victim_owner']].supply.get(t['victim'], 0):
+    if (unit == 'assassin' or (s.extras.get('copies', {}).get(unit, {}).get('unit') == 'assassin' and s.extras['copies'][unit]['attributes'])) and t['poisoned'] and s.players[t['victim_owner']].supply.get(t['victim'], 0):
         groups.append([task('cull', who, unit, pos, victim=t['victim'], optional=True)])
     if pos in s.board and s.board[pos].unit == unit:
-        if unit == 'swordsman': groups.append([task('move', who, unit, pos, optional=True)])
-        if unit == 'warrior_priest': groups.append([task('draw', who, unit, pos)])
+        if co.has_attribute(s, pos, 'swordsman'): groups.append([task('move', who, unit, pos, optional=True)])
+        if co.has_attribute(s, pos, 'warrior_priest'): groups.append([task('draw', who, unit, pos)])
+        if co.has_attribute(s, pos, 'overlord') and s.board[pos].count < 5:
+            lost = Counter(s.players[1-who].removed) - Counter(t.get('before_removed', []))
+            if lost: groups.append([task('capture', who, unit, pos, choices=list(lost.elements()), optional=True)])
         groups.append(maneuver_hooks(s, pos))
     result = ordered(groups, who)
     # Rearguard follows all effects caused by the attack, before the next attack.
@@ -528,6 +617,8 @@ def execute(s, a, events, continuation=None):
     pos = a.source or next(iter(positions(s, who, coin)), None)
     t = continuation or {}
     kind = a.kind
+    extra = co.execute(s, a, events, t)
+    if extra is not None: return extra
     if kind == 'finish': return []
     if kind == 'resolve':
         groups = deepcopy(t['groups'])
@@ -536,13 +627,13 @@ def execute(s, a, events, continuation=None):
     if kind == 'pass': return []
     if kind == 'initiative':
         s.initiative, s.initiative_claimed = who, True
-        return []
+        return [task('emissaries', who)]
     if kind == 'return_decoy':
         s.extras['decoys'][coin.removeprefix('decoy_')] = True
         return []
     if kind == 'cure':
-        targets = {tuple(p) for p in positions(s, who, coin)}
-        s.extras['poison'] = {u: p for u, p in s.extras['poison'].items() if tuple(p) not in targets}
+        targets = {p for p, st in co.stacks(s) if st.owner == who and st.unit == coin}
+        s.extras['poison'] = {u: p for u, p in s.extras['poison'].items() if tuple(p) not in targets or s.extras.get('poison_units', {}).get(u, coin) != coin}
         event(events, 'cure', player=who, unit=coin)
         return []
     if kind == 'recruit':
@@ -553,11 +644,17 @@ def execute(s, a, events, continuation=None):
             return ordered([t['first_hooks'], hooks], who)
         return hooks
     if kind == 'deploy':
+        if a.target in s.board:
+            co.underlays(s)[co.key(a.target)] = dict(owner=s.board[a.target].owner, unit=s.board[a.target].unit, count=s.board[a.target].count)
         s.board[a.target] = Stack(who, coin)
         return deploy_hooks(s, a.target)
     if kind == 'redeploy':
         st = s.board[pos]
+        carried = co.underlays(s).pop(co.key(pos), None) if co.is_ship(s, pos) else None
         remove_unit(s, pos)
+        if a.target in s.board:
+            co.underlays(s)[co.key(a.target)] = dict(owner=s.board[a.target].owner, unit=s.board[a.target].unit, count=s.board[a.target].count)
+        if carried: co.underlays(s)[co.key(a.target)] = carried
         s.board[a.target] = st
         event(events, 'redeploy', player=who, unit=st.unit, start=pos, end=a.target)
         return deploy_hooks(s, a.target)
@@ -576,7 +673,7 @@ def execute(s, a, events, continuation=None):
         event(events, 'fort_built', player=who, unit=coin, pos=pos)
         return []
     if kind == 'deceive':
-        deceive(s, who, coin, events)
+        deceive(s, who, 'infiltrator' if coin == 'apprentice' else coin, events)
         return []
     if kind == 'cull':
         p = s.players[1-who]
@@ -613,14 +710,14 @@ def execute(s, a, events, continuation=None):
             s.players[who].supply[coin] -= 1
             s.players[who].removed.append(coin)
             event(events, 'supply_damage', player=who, unit=coin)
-        elif kind == 'defend_decoy': deceive(s, who, coin, events)
+        elif kind == 'defend_decoy': deceive(s, who, 'skirmisher' if coin == 'apprentice' else coin, events)
         else: damage(s, a.target if kind == 'defend_wagon' else pos, events)
         return []
     if kind == 'displace':
         move(s, pos, a.path[-1], events)
         return []
     st = s.board[pos]
-    unit, owner = st.unit, st.owner
+    unit, owner = co.role(s, pos), st.owner
     effect = a.effect or kind
     groups, suffix = [], []
     if t.get('type') == 'x_berserk': unbolster(s, pos, events)
@@ -639,7 +736,7 @@ def execute(s, a, events, continuation=None):
     if effect.startswith('bishop_'):
         groups.append(recruit(s, owner, a.recruit, events))
         effect = effect.removeprefix('bishop_')
-    if kind == 'tactic' and coin == 'footman':
+    if kind == 'tactic' and unit == 'footman':
         suffix += [task('maneuver', owner, unit, p, normal_only=True)
                    for p in positions(s, owner, unit) if p != pos]
     if effect.startswith('double_'):
@@ -663,6 +760,7 @@ def execute(s, a, events, continuation=None):
         if effect == 'earl': suffix.insert(0, task('decree', owner, unit, pos))
     elif effect == 'poison':
         s.extras['poison'][unit] = list(a.target)
+        if 'poison_units' in s.extras: s.extras['poison_units'][unit] = s.board[a.target].unit
         event(events, 'poison', player=owner, unit=unit, pos=a.target)
     elif effect == 'shock':
         shock(s, a.target, events)
@@ -679,6 +777,10 @@ def pump(s, events):
     while s.pending and s.winner is None:
         t = s.pending[0]
         kind = t['type']
+        if t.get('source') is not None: co.expose(s, tuple(t['source']), t['unit'])
+        if co.pump_task(s, t, events):
+            co.normalize(s)
+            continue
         if kind == 'x_draw':
             s.pending.pop(0)
             extra = _draw_extra(s, t['player'], events)
@@ -718,15 +820,21 @@ def apply_action(state, action):
     hidden = action.kind in ('pass', 'initiative', 'recruit') and not free
     event(events, 'action', player=who, kind=action.kind, coin=None if hidden else action.coin,
           path=action.path, target=action.target, recruit=None if action.kind == 'spy_discard' else action.recruit,
-          after=action.after, source=action.source, effect=action.effect, free=free)
+          after=action.after, source=action.source, effect=action.effect, free=free, **({'actor':action.actor} if action.actor else {}), **({'target_unit':action.target_unit} if action.target_unit else {}))
     if not free:
         s.players[who].hand.remove(action.coin)
         if hidden: event(events, 'payment', visible_to=who, coin=action.coin)
         if action.kind not in ('deploy', 'bolster', 'return_decoy'):
             s.players[who].discard.append((action.coin, not hidden))
+    co.expose(s, action.source, action.actor)
+    co.expose(s, action.target, action.target_unit)
+    if continuation and continuation.get('source') is not None:
+        co.expose(s, tuple(continuation['source']), continuation['unit'])
     tasks = execute(s, action, events, continuation if free else None)
+    co.normalize(s)
     s.pending = tasks + s.pending
     pump(s, events)
+    co.normalize(s)
     s.history += tuple(events)
     return s, tuple(events)
 
@@ -743,12 +851,12 @@ def validate_extras(s):
     def require(ok, msg):
         if not ok: raise ValueError(msg)
     x = s.extras
-    require(s.version == 'expansions-1', 'expanded rules version missing')
+    require(s.version in ('expansions-1', 'expansions-2'), 'expanded rules version missing')
     require(set(x['enabled']) <= EXPANSIONS.keys(), 'unknown expansion')
     require(len(forts(s)) == len(x['forts']) and forts(s) <= LOCATIONS and len(forts(s)) <= 7, 'invalid fortifications')
     require(not forts(s) or 'siege' in x['enabled'], 'fortifications without siege')
     for poisoner, pos in x['poison'].items():
-        require(poisoner in ('assassin', 'saboteur') and tuple(pos) in s.board, 'invalid poison marker')
+        require(poisoner in ('assassin', 'saboteur', 'apprentice') and tuple(pos) in s.board, 'invalid poison marker')
         owner = next((i for i, p in enumerate(s.players) if poisoner in p.supply), None)
         require(owner is not None and s.board[tuple(pos)].owner != owner, 'invalid poisoned unit')
     families = [unit_family(u) for p in s.players for u in p.supply]
@@ -773,3 +881,17 @@ def validate_extras(s):
         require(all(not c.startswith('decoy_') or c.removeprefix('decoy_') in expected_decoys
                     for c in p.hand + p.bag + [c for c, _ in p.discard]), 'unknown decoy')
         require(not any(c.startswith('decoy_') for c in p.removed), 'decoy cannot be destroyed')
+
+    require(len(x.get('lost_markers', [0, 0])) == 2 and all(type(n) is int and 0 <= n <= 6 for n in x.get('lost_markers', [0, 0])), 'invalid lost control markers')
+    require(not any(x.get('lost_markers', [])) or 'champions' in x['enabled'], 'champion penalty without expansion')
+    for p, other in x.get('underlays', {}).items():
+        pos = co.coord(p)
+        require(pos in s.board and other['owner'] == s.board[pos].owner and (other['unit'] == 'longboat' and other['count'] == 1 or other['unit'] == 'apprentice' and other['unit'] in x.get('transports', [])) and s.board[pos].unit != other['unit'], 'invalid transport')
+    for p, st in co.stacks(s):
+        require(st.unit != 'longboat' or st.count == 1, 'longboat cannot be bolstered')
+    for unit, trophies in x.get('captured', {}).items():
+        live = next((st for _, st in co.stacks(s) if st.unit == unit), None)
+        require(not trophies or live is not None and live.count > len(trophies), 'captured coins without captor')
+        require(all(owner in (0, 1) and coin in s.players[owner].supply and owner != live.owner for owner, coin in trophies), 'invalid captured coins')
+    for unit, copy in x.get('copies', {}).items():
+        require(unit == 'apprentice' and copy['unit'] in UNITS and copy['unit'] != unit and type(copy['attributes']) is bool and type(copy['tactics']) is bool, 'invalid copied ability')

@@ -78,3 +78,37 @@
 .expansion-status{font-size:11px;color:var(--gold);margin:9px 0 0;border-top:1px solid var(--line);padding-top:8px}
 
 .spy-hand{font-size:13px;line-height:1.8;padding:12px;background:#293b44;color:#f1dbad;border-radius:5px}
+
+/* BP replaces the battlefield until both armies have been selected. */
+.arena.drafting{display:flex;flex-direction:column}
+.arena.drafting .player-zone,.arena.drafting .battlefield,.arena.drafting #decision-strip{display:none}
+.draft-panel{flex:1;min-height:0;overflow:auto;padding:18px;scrollbar-width:thin}
+.draft-heading h2{font:24px var(--serif);margin:5px 0 8px;color:var(--gold)}
+.draft-heading p{font-size:12px;color:var(--muted);line-height:1.7;margin:0 0 12px}
+.draft-phases{display:flex;flex-wrap:wrap;gap:5px;list-style:none;padding:0;margin:12px 0}
+.draft-phases li{padding:5px 8px;border:1px solid var(--line);border-radius:4px;font-size:10px;color:var(--muted)}
+.draft-phases .current{color:var(--gold);border-color:var(--gold);background:#403c2e}.draft-phases .done{color:#9dbbab}
+.draft-rosters{display:grid;grid-template-columns:1fr 1fr;gap:10px}.draft-rosters section{min-width:0;padding:10px;border:1px solid var(--line);border-radius:6px;overflow-wrap:anywhere}
+.draft-rosters strong{font-size:12px;color:var(--gold)}.draft-rosters p{font-size:12px;margin:7px 0}.draft-rosters small{font-size:11px;color:var(--muted)}
+.draft-status{font-size:14px;color:var(--gold);margin:15px 0}
+.draft-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.draft-card{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px;background:#203140;border:1px solid var(--line);border-radius:7px;min-width:0}
+.draft-card strong{font-size:13px}.draft-card small{font-size:10px;color:var(--gold)}.draft-card>span:last-child{font-size:11px;line-height:1.7;text-align:left;color:#b8c6d0}
+.draft-card.selected{background:#384337;border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}.draft-card:disabled{cursor:default;opacity:.65}.draft-card.banned{opacity:.4}.draft-card.banned strong{text-decoration:line-through}
+.draft-confirm{position:sticky;bottom:-18px;background:#172633f5;border-top:1px solid var(--line);padding:12px 0;margin-top:14px;display:flex;align-items:center;gap:12px}
+.draft-confirm>span{flex:1;font-size:12px;overflow-wrap:anywhere}.draft-confirm .button{width:auto;flex-shrink:0;font-size:12px}
+@media(max-width:600px){.draft-panel{padding:12px}.draft-rosters{gap:6px}.draft-rosters section{padding:8px}.draft-confirm{bottom:-12px}.draft-card{padding:10px 8px}}
+
+/* Large opponent-action announcements stay above the board and allow clicks through. */
+.opponent-notice{position:absolute;z-index:4;top:50%;left:50%;transform:translate(-50%,-45%);width:max-content;max-width:94%;box-sizing:border-box;padding:18px 24px;border:1px solid #e9ca8c88;border-radius:10px;background:linear-gradient(135deg,#101b28f2,#243c4bea);box-shadow:0 8px 32px #0007;text-align:center;pointer-events:none;opacity:0;transition:opacity .22s ease,transform .22s ease}
+.opponent-notice.visible{opacity:1;transform:translate(-50%,-50%)}
+.opponent-notice strong{display:block;font:700 clamp(24px,3vw,40px)/1.35 var(--serif);color:#ffe3a0;text-shadow:0 2px 5px #000;overflow-wrap:anywhere}
+.opponent-notice span{display:block;font-size:clamp(15px,1.6vw,22px);color:#f1e5cc;line-height:1.6;margin-top:6px}.opponent-notice span:empty{display:none}
+@media(max-width:600px){.opponent-notice{padding:15px 18px}.opponent-notice strong{font-size:28px}}
+@media(prefers-reduced-motion:reduce){.opponent-notice{transition:none;transform:translate(-50%,-50%)}}
+.draft-card .draft-coin-count{font-size:13px;color:#ffe3a0;font-weight:600;border:1px solid #9e895b70;border-radius:4px;padding:2px 8px}
+
+.draft-public-setup{margin:16px 0;padding:14px;border:1px solid #69717b;border-radius:12px}.draft-public-setup h3{margin:0 0 10px}.draft-decrees{padding-left:20px}.draft-decrees li{margin:6px 0}.draft-map{display:block;width:230px;max-width:100%;margin:0 auto}.draft-public-setup p{font-size:12px;text-align:center}
+
+
+.hex.sea-hex .tile{fill:#325f7b}.hex.sea-hex .inner-line{stroke:#83bacb}.hex.sea-hex.available .tile{fill:#468b93}.transport-label{font-size:10px;fill:#fff;paint-order:stroke;stroke:#152c3e;stroke-width:3px}.expansion-rule-guide details{border-top:1px solid #806f5060;padding:14px 0}.expansion-rule-guide summary{cursor:pointer;font-weight:bold;line-height:1.6}.expansion-rule-guide small{display:block;margin-top:8px;color:#b8a580}.expansion-rule-guide ul{padding-left:20px;line-height:1.8}.expansion-rule-guide li{margin:8px 0}.expansion-rule-guide a{color:#d7bb7e}#general-dialog{max-height:85dvh;overflow:auto}

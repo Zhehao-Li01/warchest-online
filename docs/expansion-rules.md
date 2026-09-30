@@ -12,6 +12,9 @@
 | 新控制能启用守卫法令 | 伯爵战术的预览校验 | `earl_new_control_can_enable_guard_decree` |
 | 传令官只增强相邻未增强友军；颁布后调遣 | `supply_bolster`, `proclaim` | `herald_bolsters_other_unbolstered_unit_from_its_supply`、伯爵联动测试 |
 | 堡垒进入、穿越、先摧毁堡垒再伤单位 | `can_enter`, `paths`, `attack` | `forts_block_entry_transit_and_absorb_attack` |
+| 无主堡垒可移入或拆除，远程攻击限制仍适用 | `attackable`, `attack` | `empty_neutral_fort_can_be_entered_or_destroyed`, `neutral_fort_ranged_attack_obeys_archer_restriction` |
+| 堡垒保护敌军不依赖据点控制权 | `attackable`, `attack` | `fort_protects_enemy_garrison_regardless_of_control` |
+| 行军多单位选择，共享目的地 | `decree_actions`, 前端 `candidates` | `march_can_move_either_bolstered_unit_to_shared_destination`, 浏览器 `march_selects_unit_before_shared_destination` |
 | 工兵移动建造、移动后必须有堡垒可攻击 | `move_hooks`, `maneuvers` | `sapper_build_and_mandatory_attack` |
 | 攻城塔部署增强、两次攻击；反伤减至一层仍继续 | `deploy_hooks`, `double_attack` | `siege_tower_deploy_bolster_and_double_pikeman_faq` |
 | 投石机直线二/三格、越过阻挡、须增强、禁普通攻击 | `maneuvers` | `trebuchet_range_and_blockers` |
@@ -40,3 +43,7 @@
 | 房主配置、关闭扩展、重复/替代冲突、再战继承 | `Rooms.configuration`, `fresh_state` | `tests/test_web.py` 三项扩展测试 |
 | 浏览器选扩展/双方阵容、好友加入、法令/侦察 | `setup.js`, `app.js` | `tests/test_browser.py` 两项扩展流程 |
 | 100 个固定种子、每局上限 2,000、覆盖全部卡 | `scripts/validate_expansions.py` | [完整结果](expansion-simulation-results.json) |
+
+新增核对：基础与扩展牧师反伤存活条件由 `priest_pikeman_survival_matches_base` 覆盖；BP 公开设置在 `tests/test_draft.py::test_exact_order_restart_deal_and_rematch` 验证双方可见、重启保持和最终开局一致；战车选择顺序由浏览器 `wagon_selects_ally_before_destination` 覆盖。
+
+网站扩展新增十二种卡及规则覆盖见 [网站扩展说明与验证](community-expansions.md)，专项用例集中在 `tests/test_community.py`；原官方扩展覆盖表保留。

@@ -1,6 +1,9 @@
 // Disposable SVG overlays; animations never mutate game state or block input.
 const NS = 'http://www.w3.org/2000/svg';
 const PROFILES = {
+ commander:['thrust','#edce83'],dragoon:['charge','#d1d9dd'],marksman:['arrow','#e8bd87'],ranger:['charge','#a3c6e3'],
+ alchemist:['holy','#bb9ed7'],apprentice:['holy','#b6d7c9'],emissary:['thrust','#ebd7a9'],overlord:['heavy','#c79fb8'],
+ pirate:['slash','#7ed3d5'],longboat:['heavy','#90b4cc'],corsair:['double','#d4b793'],admiral:['thrust','#9baedb'],
  bannerman:['slash','#eac29e'],bishop:['holy','#e2c7f5'],earl:['heavy','#e9c86b'],herald:['thrust','#b1dca8'],
  sapper:['heavy','#bdceaf'],siege_tower:['heavy','#c4c4bb'],trebuchet:['bolt','#e2b477'],war_wagon:['charge','#a7bcd3'],
  assassin:['thrust','#cf8eb9'],saboteur:['holy','#bbc67c'],infiltrator:['slash','#b6bdcf'],skirmisher:['charge','#a7cbbd'],

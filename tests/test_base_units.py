@@ -160,12 +160,13 @@ def test_priest_immediate_extra_coin_is_mandatory_and_hidden():
     assert s.current == 1 and s.players[0].hand == ["footman"]
 
 
-def test_priest_attack_triggers_even_after_pike_death():
+def test_priest_attack_does_not_draw_after_pike_death():
     b = ("pikeman", "knight", "ensign", "mercenary")
     s = position(A, b, board=(((0, 0), 0, "warrior_priest", 1), ((1, 0), 1, "pikeman", 1)),
                  hands=(("warrior_priest",), ("royal",)))
     s = act(s, Action("attack", "warrior_priest", target=(1, 0)))
-    assert s.board == {} and s.pending[0]["type"] == "coin"
+    assert s.board == {} and s.pending == []
+    assert s.current == 1 and s.players[0].bag == ["royal"]
 
 
 @pytest.mark.parametrize("choice", ["defend_unit", "defend_supply"])

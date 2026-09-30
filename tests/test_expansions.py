@@ -59,8 +59,8 @@ def finish(s):
 
 
 def test_catalog_layouts_and_setup():
-    assert len(UNITS)==35 and len(BASE_UNITS)==16
-    assert Counter(u.expansion for u in UNITS.values())==dict(base=16,nobility=4,siege=4,nightfall=4,shock=7)
+    assert len(UNITS)==47 and len(BASE_UNITS)==16
+    assert Counter(u.expansion for u in UNITS.values())==dict(base=16,nobility=4,siege=4,nightfall=4,shock=7,champions=4,mastery=4,high_seas=4)
     assert sum(UNITS[u].coins for u in UNITS if UNITS[u].expansion=='nightfall')==18
     assert len(set(FORT_LAYOUTS))==6
     for layout in FORT_LAYOUTS:
@@ -396,9 +396,72 @@ def test_earl_new_control_can_enable_guard_decree():
     s=act(s,'attack'); assert not s.board
 
 
-def test_basic_ai_does_not_loop_warlord_self_command():
-    from warchest.ai import choose_basic_action
-    s=position(('warlord',),board=(((0,0),0,'warlord',1),),hands=(('warlord',),('royal',)))
-    s=act(s,'tactic',effect='command',target=(0,0))
-    a=choose_basic_action(observe(s,0),legal_actions(s),random.Random(0))
-    assert not (a.effect=='command' and a.source==a.target)
+@pytest.mark.parametrize('owner', [None, 0, 1])
+def test_fort_protects_enemy_garrison_regardless_of_control(owner):
+    target = (1,-1)
+    s = position(('pikeman',), ('bishop',),
+                 board=(((0,-1),0,'pikeman',2),(target,1,'bishop',1)),
+                 hands=(('pikeman',),('royal',)), forts=(target,))
+    s.controls[target] = owner
+    # The Bishop normally cannot be attacked by a bolstered unit, but the fort can.
+    action = next(a for a in legal_actions(s) if a.kind == 'attack' and a.target == target)
+    assert action.effect == 'fort_attack'
+    after, events = apply_action(s, action)
+    validate_state(after)
+    assert not after.extras['forts'] and after.board[target].count == 1
+    assert after.controls[target] == owner
+    assert any(e.kind == 'fort_destroyed' for e in events)
+    assert not any(e.kind == 'damage' for e in events)
+
+
+def test_empty_neutral_fort_can_be_entered_or_destroyed():
+    target = (1,-1)
+    s = position(('pikeman',), board=(((0,-1),0,'pikeman',1),),
+                 hands=(('pikeman',),('royal',)), forts=(target,))
+    assert s.controls[target] is None
+    move = next(a for a in legal_actions(s) if a.kind == 'move' and a.path == (target,))
+    attack = next(a for a in legal_actions(s) if a.kind == 'attack' and a.target == target)
+    moved, _ = apply_action(s, move)
+    destroyed, events = apply_action(s, attack)
+    validate_state(moved); validate_state(destroyed)
+    assert list(target) in moved.extras['forts'] and target in moved.board
+    assert not destroyed.extras['forts'] and target not in destroyed.board
+    assert (0,-1) in destroyed.board and destroyed.controls[target] is None
+    assert any(e.kind == 'fort_destroyed' for e in events)
+
+
+def test_neutral_fort_ranged_attack_obeys_archer_restriction():
+    s = position(('archer',), board=(((-1,-1),0,'archer',1),),
+                 hands=(('archer',),('royal',)), forts=((1,-1),))
+    assert not any(a.kind == 'attack' for a in legal_actions(s))
+    after = act(s, 'tactic', target=(1,-1))
+    assert not after.extras['forts']
+
+
+def test_march_can_move_either_bolstered_unit_to_shared_destination():
+    s = position(('knight','pikeman'), board=(((0,0),0,'knight',2),((1,-1),0,'pikeman',2)),
+                 decrees=('march','guard','reinforce'))
+    s = act(s, 'proclaim', effect='march')
+    moves = [a for a in legal_actions(s) if a.kind == 'move' and a.path == ((1,0),)]
+    assert {a.source for a in moves} == {(0,0),(1,-1)}
+    for action in moves:
+        after, _ = apply_action(s, action)
+        validate_state(after)
+        assert after.board[(1,0)].unit == action.coin
+        assert after.board[(1,0)].count == 2 and action.source not in after.board
+
+
+@pytest.mark.parametrize('count', [1, 2])
+def test_priest_pikeman_survival_matches_base(count):
+    from test_base_units import position as base_position
+    armies = (('warrior_priest','footman','berserker','marshall'),
+              ('pikeman','knight','ensign','mercenary'))
+    board = (((0,0),0,'warrior_priest',count),((1,0),1,'pikeman',1))
+    hands = (('warrior_priest',),('royal',))
+    base = base_position(*armies, board=board, hands=hands)
+    expanded = position(*armies, board=board, hands=hands)
+    for state in (base, expanded):
+        result = act(state, 'attack', target=(1,0))
+        assert bool(result.pending) == (count == 2)
+        assert result.players[0].bag == ([] if count == 2 else ['royal'])
+        assert result.current == (0 if count == 2 else 1)

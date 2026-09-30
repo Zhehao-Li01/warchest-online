@@ -26,7 +26,7 @@ def append_step(record, action, state, events):
 
 
 def replay_states(record):
-    if record.get("format") != 1 or record.get("rules_version") not in (RULES_VERSION, "expansions-1"):
+    if record.get("format") != 1 or record.get("rules_version") not in (RULES_VERSION, "expansions-1", "expansions-2"):
         raise ValueError("不支持的回放版本")
     if record.get("status") not in {"ongoing", "finished", "aborted", "truncated"}:
         raise ValueError("无效的回放状态")

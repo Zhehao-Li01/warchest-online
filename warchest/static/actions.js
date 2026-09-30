@@ -22,26 +22,39 @@ export const GROUPS = [
  {id:'spy',label:'查看手牌',symbol:'◉',hint:'查看对手当前手牌',kinds:['spy']},
  {id:'spy_discard',label:'弃置对手手牌',symbol:'↓',hint:'选择一枚，对手补抽',kinds:['spy_discard']},
  {id:'resolve',label:'选择技能顺序',symbol:'⇄',hint:'先结算哪项效果',kinds:['resolve']},
+ {id:'capture',label:'俘获敌币',symbol:'◇',hint:'把本次消灭的敌币垫在霸主下方',kinds:['capture']},
+ {id:'spend_move',label:'弃增强再移动',symbol:'↗',hint:'弃一枚增强币，移动一格',kinds:['spend_move']},
+ {id:'change_initiative',label:'变更先手',symbol:'♛',hint:'夺取或交出先手',kinds:['change_initiative']},
  {id:'finish', label:'结束追加', symbol:'✓', hint:'不再执行追加行动', kinds:['finish']},
 ];
 export const key = p => p.join(',');
-export const actionLabel = a => ({move:'移动',attack:'攻击',control:'控制'})[a.kind]
+export const actionLabel = a => a.effect==='fort_attack' ? '拆除堡垒' : ({move:'移动',attack:'攻击',control:'控制'})[a.kind]
  || GROUPS.find(g=>g.kinds.includes(a.kind))?.label || '行动';
 export function groupActions(actions) {return GROUPS.map(g=>({...g, actions:actions.filter(a=>g.kinds.includes(a.kind))})).filter(g=>g.actions.length);}
 export function candidates(actions, view, groupId) {
- const sources = new Set(actions.map(a=>a.source ? key(a.source) : ''));
- return actions.map(action=>{
+ // The server already enumerates complete legal routes. Choose the shortest
+ // valid route for each otherwise-identical action and destination, retaining
+ // its original action id and full path for server validation.
+ const seen = new Set();
+ const choices = [...actions].sort((a,b)=>a.path.length-b.path.length).filter(action=>{
+  const {id,path,...rest}=action;
+  const signature=JSON.stringify({...rest,path:path.length?[path.at(-1)]:[]});
+  if(seen.has(signature))return false;
+  seen.add(signature);return true;
+ });
+ const sources = new Set(choices.map(a=>a.source ? key(a.source) : ''));
+ return choices.map(action=>{
   const steps=[];
-  const control = action.kind==='control' || action.effect==='control';
+  const control = action.kind==='control' || ['control','emissary','earl'].includes(action.effect);
   const source = action.source || view?.board.find(s=>s.owner===view.player&&s.unit===action.coin)?.pos;
-  // In maneuver mode, clicking one's occupied control point must control it,
-  // rather than getting consumed as a generic Footman source-selection step.
-  if(groupId!=='maneuver' && action.source && sources.size>1)steps.push({pos:action.source,role:'source'});
-  for(const pos of action.path)steps.push({pos,role:'move'});
-  if(action.target)steps.push({pos:action.target,role:['deploy','redeploy'].includes(action.kind)?'deploy':['command','supply_bolster','wagon_push'].includes(action.effect)||action.kind==='defend_wagon'?'source':'attack'});
+  // Multi-unit actions (including decrees) choose the actor before any destination.
+  // A control action needs no second click on its already-selected source.
+  if(action.source && sources.size>1)steps.push({pos:action.source,role:'source'});
+  if(action.effect==='wagon_push')steps.push({pos:action.target,role:'source'});
+  if(action.path.length)steps.push({pos:action.path.at(-1),role:'move'});
+  if(action.target && action.effect!=='wagon_push')steps.push({pos:action.target,role:['deploy','redeploy'].includes(action.kind)?'deploy':(['command','command_free','swap','supply_bolster','wagon_push'].includes(action.effect)||action.effect?.startsWith('copy_'))||action.kind==='defend_wagon'?'source':'attack'});
   if(control && source && (!steps.length || key(steps.at(-1).pos)!==key(source)))steps.push({pos:source,role:'control'});
   if(action.after)steps.push({pos:action.after,role:'after'});
-  if(groupId==='maneuver' && !control && action.source && sources.size>1)steps.push({pos:action.source,role:'source'});
   return {action,steps};
  });
 }

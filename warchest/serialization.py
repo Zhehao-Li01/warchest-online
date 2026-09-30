@@ -20,7 +20,7 @@ def action_from_dict(data):
                   data.get("recruit"),
                   tuple(data["after"]) if data.get("after") is not None else None,
                   tuple(data["source"]) if data.get("source") is not None else None,
-                  data.get("effect"))
+                  data.get("effect"), data.get("actor"), data.get("target_unit"))
 
 
 def state_dict(state, *, history=True):
@@ -48,7 +48,7 @@ def serialize(state):
 def deserialize(payload):
     try:
         data = json.loads(payload)
-        if data["format"] != FORMAT_VERSION or data["version"] not in (RULES_VERSION, "expansions-1"):
+        if data["format"] != FORMAT_VERSION or data["version"] not in (RULES_VERSION, "expansions-1", "expansions-2"):
             raise ValueError("不支持的存档版本")
         players = [Player(p["supply"], p["bag"], p["hand"],
                           [tuple(d) for d in p["discard"]], p["removed"])

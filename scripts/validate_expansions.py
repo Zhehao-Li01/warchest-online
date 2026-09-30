@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import random
 from warchest import new_game, legal_actions, apply_action, observe, validate_state, serialize, deserialize
-from warchest.ai import choose_basic_action
+from warchest.ai import choose_action
 from warchest.units import UNITS, EXPANSIONS, unit_family
 from warchest.serialization import state_digest
 from warchest.recording import new_record, append_step, replay_states
@@ -25,8 +25,8 @@ def main():
             actions=legal_actions(s)
             assert actions, (seed,steps,s.pending)
             a=rng.choice(actions)
-            # Also evaluate the user-facing basic AI against every state.
-            assert choose_basic_action(observe(s,s.current,include_history=False),actions,rng) in actions
+            # Also evaluate the user-facing random AI against every state.
+            assert choose_action(observe(s,s.current,include_history=False),actions,rng) in actions
             s,events=apply_action(s,a); validate_state(s)
             if steps%100==0:
                 restored=deserialize(serialize(s))

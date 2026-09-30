@@ -14,6 +14,8 @@ class Action:
     after: Coord | None = None
     source: Coord | None = None
     effect: str | None = None
+    actor: str | None = None
+    target_unit: str | None = None
 
 
 @dataclass

@@ -29,14 +29,14 @@ def test_static_and_bootstrap(app):
     assert c.get("/").status_code == 200
     assert c.get("/static/app.js").status_code == 200
     data = c.get("/api/bootstrap").get_json()
-    assert len(data["units"]) == 35 and len(data["hexes"]) == 37
+    assert len(data["units"]) == 47 and len(data["hexes"]) == 37
     assert "rng_state" not in data["preview"]
     assert c.get("/static/../web.py").status_code == 404
 
 
 def test_waiting_join_and_seat_privacy(app):
     c = app.test_client()
-    a = c.post("/api/rooms", json={"name": "A"}).get_json()
+    a = c.post("/api/rooms", json={"name": "A", "mode": "random"}).get_json()
     url = f"/api/rooms/{a['code']}"
     waiting = c.get(url, headers=auth(a)).get_json()
     assert waiting["status"] == "waiting" and waiting["actions"] == []
@@ -135,7 +135,7 @@ def test_online_random_armies_are_disjoint_four_each(app):
 
 def test_host_custom_expansions_validation_persistence_and_rematch(app):
     armies=[['bannerman','bishop','earl','herald'],['sapper','siege_tower','trebuchet','war_wagon']]
-    payload={'name':'房主','mode':'custom','armies':armies,'expansions':['base','nobility','siege'],'initiative':1,'opponent':'ai'}
+    payload={'name':'房主','mode':'custom','armies':armies,'expansions':['base','nobility','siege'],'initiative':1,'opponent':'ai','ai_level':'random'}
     c=app.test_client()
     for bad in ({'expansions':['base']},{'armies':[armies[0],armies[0]]},{'expansions':['base','equipment']},{'initiative':True}):
         assert c.post('/api/rooms',json={**payload,**bad}).status_code==400
@@ -165,3 +165,60 @@ def test_server_rejects_alternate_base_conflict(app):
     response=c.post('/api/rooms',json={'name':'A','mode':'custom','expansions':['base','shock'],
       'armies':[['warlord','swordsman','pikeman','knight'],['marshall','archer','cavalry','scout']]})
     assert response.status_code==400 and '替代' in response.get_json()['error']
+
+
+def test_public_activity_hides_payments_and_resets_on_rematch(app):
+    c, a, b = seated(app)
+    url = f"/api/rooms/{a['code']}"
+    snap = c.get(url, headers=auth(a)).get_json()
+    assert snap['activity'] == []
+    for kind, seat in [('recruit', a), ('initiative', b), ('pass', a)]:
+        snap = c.get(url, headers=auth(seat)).get_json()
+        action = next(item for item in snap['actions'] if item['kind'] == kind)
+        after = c.post(url+'/actions', headers=auth(seat), json={'revision':snap['revision'], 'action_id':action['id']}).get_json()
+        public = after['activity'][-1]
+        assert public['revision'] == after['revision']
+        assert public['action']['kind'] == kind and public['action']['player'] == seat['player']
+        assert public['action']['coin'] is None
+        if kind == 'recruit':
+            assert public['action']['recruit'] == action['recruit']
+    # Both seats get the same public feed; polling does not add duplicate events.
+    for seat in (a,b):
+        assert c.get(url, headers=auth(seat)).get_json()['activity'] == after['activity']
+    restarted = create_app(app.extensions['rooms'].path).test_client()
+    assert restarted.get(url, headers=auth(b)).get_json()['activity'] == after['activity']
+    ended = c.post(url+'/resign', headers=auth(a), json={'revision':after['revision']}).get_json()
+    vote = {'revision':ended['revision'], 'game':ended['game']}
+    c.post(url+'/rematch', headers=auth(a), json=vote)
+    again = c.post(url+'/rematch', headers=auth(b), json=vote).get_json()
+    assert again['activity'] == []
+
+
+@pytest.mark.parametrize('mode,enabled', [('bp',['nobility','siege','nightfall']),('random',['nobility','siege'])])
+def test_base_optional_for_expansion_only_rooms(app,mode,enabled):
+    c=app.test_client()
+    response=c.post('/api/rooms',json={'name':'纯扩展','mode':mode,'expansions':enabled})
+    assert response.status_code==201
+    seat=response.get_json()
+    snap=c.get('/api/rooms/'+seat['code'],headers=auth(seat)).get_json()
+    assert snap['config']['expansions']==sorted(enabled)
+    from warchest.units import UNITS
+    units=snap['draft']['pool'] if mode=='bp' else [u for p in snap['view']['players'] for u in p['supply']]
+    assert all(UNITS[u].expansion in enabled for u in units)
+
+
+@pytest.mark.parametrize('mode,enabled,minimum', [('bp',['nobility','siege'],10),('random',['shock'],8),('custom',['siege'],8)])
+def test_expansion_only_pool_must_be_large_enough(app,mode,enabled,minimum):
+    response=app.test_client().post('/api/rooms',json={'name':'不足','mode':mode,'expansions':enabled})
+    assert response.status_code==400
+    assert str(minimum) in response.get_json()['error']
+
+
+def test_custom_armies_can_exclude_base(app):
+    c=app.test_client()
+    response=c.post('/api/rooms',json={'name':'自选扩展','mode':'custom','expansions':['nobility','siege'],
+        'armies':[['bannerman','bishop','earl','herald'],['sapper','siege_tower','trebuchet','war_wagon']]})
+    assert response.status_code==201
+    seat=response.get_json()
+    snap=c.get('/api/rooms/'+seat['code'],headers=auth(seat)).get_json()
+    assert snap['view']['extras']['enabled']==['nobility','siege']

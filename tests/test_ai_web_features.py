@@ -1,34 +1,8 @@
-import random
+from warchest import apply_action, legal_actions
 
-from warchest import apply_action, legal_actions, observe, new_game, validate_state
-from warchest.ai import choose_basic_action
 from warchest.presentation import combat_effects
 from warchest.web import create_app
 from test_base_units import A, B, position
-
-
-def test_basic_ai_controls_and_uses_only_observation():
-    s = position(A, B, board=(((-2, 0), 0, 'footman', 1),), hands=(('footman',), ('royal',)))
-    view = observe(s, 0)
-    action = choose_basic_action(view, legal_actions(s), random.Random(1))
-    assert action.kind == 'control' or action.effect == 'control'
-    assert view['players'][1]['hand'] is None
-    assert action == choose_basic_action(view, legal_actions(s), random.Random(1))
-
-
-def test_basic_ai_full_armies_runs_and_preserves_state():
-    for seed in range(4):
-        s = new_game(seed, (A, B))
-        rng = random.Random(seed)
-        for _ in range(250):
-            if s.winner is not None:
-                break
-            actions = legal_actions(s)
-            action = choose_basic_action(observe(s, s.current), actions, rng)
-            assert action in actions
-            s, _ = apply_action(s, action)
-            validate_state(s)
-
 
 def test_public_attack_and_damage_cues():
     s = position(A, B, board=(((0, 0), 0, 'footman', 1), ((1, 0), 1, 'mercenary', 1)),
